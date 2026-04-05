@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".video-list .vid"),t=document.querySelector(".load-more");let o=0;t.addEventListener("click",(function(){for(let t=o;t<o+6;t++)e[t]&&e[t].classList.add("visible");o+=6,o>=e.length&&(t.textContent="No more videos",t.disabled=!0)}))}));

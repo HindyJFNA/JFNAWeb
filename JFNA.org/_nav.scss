@@ -1,0 +1,586 @@
+.navbar {
+  background-color: #ffffff;
+  color: $primary-blue;
+}
+
+.navbar__brand{
+  padding: 8px 0px;
+}
+
+#home-link{
+  @include desktop{
+      display:none;
+  }
+}
+ 
+.navbar__container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+    box-sizing: border-box;
+    padding: 0px $sidepad-mob;
+   
+    @include tablet {
+      padding: 0px $sidepad-mob;
+    }
+
+    @include desktop {
+      padding: 0px $sidepad-desk;
+    }
+
+    @include largedesktop {
+       padding: 0px $sidepad-desk;
+    }
+    
+    @include xlargedesktop {
+       padding: 0px 10%;
+    }
+}
+
+
+
+.navbar__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+    .back-button{
+      position: absolute;
+      display: none;
+      left: 15px;
+      top: 29px;
+
+      svg path{
+        fill: $navy-blue;
+      }
+    }
+}
+
+        .navbar__toggle .hamburger {
+          width: 25px;
+          height: 2px;
+          background: $navy-blue;
+          position: relative;
+          display: block;
+          border-radius: 10px;
+          transition: .3s;
+        }
+
+        .navbar__toggle .hamburger::before,
+        .navbar__toggle .hamburger::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: $navy-blue;
+          transition: 0.3s;
+          left: 0;
+          border-radius: 10px;
+        }
+
+        .navbar__toggle .hamburger::before {
+          top: -8px;
+        }
+        .navbar__toggle .hamburger::after {
+          top: 8px; 
+        }
+
+        .navbar__toggle.open-menu {
+
+          .hamburger{
+            height: 0;
+            width: 18px;
+
+            &::before{
+              transform: rotate(45deg);
+              top: 0px;
+              transition: .3s;
+            }
+
+            &::after{
+              transform: rotate(-45deg);
+              top: 0px;
+              transition: .3s;
+            }
+          }
+
+          .back-button.visible{
+            position: absolute;
+            display: block;
+            left: 15px;
+            top: 29px;
+
+            svg path{
+              fill: $navy-blue;
+            }
+          }
+        }
+
+
+
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include desktop{
+    gap: 20px;
+  }
+
+  @include largedesktop {
+    gap: 10px;
+  }
+
+
+  .nav-item {
+    position: relative;
+
+    &.has-button{
+        padding: 0px 0px;
+    }
+
+    a { 
+      text-decoration: none;
+      padding: 20px 0px;
+
+      @include largedesktop {
+        padding: 20px;
+      }
+
+      @include p-bold($dark-gray);
+
+      &.button{
+        z-index: 2000;
+        position: relative;
+        @include button($primary-blue, $white);
+        border-radius: 40px;
+
+        padding: 12px 15px;
+
+        @include largedesktop{
+          padding: 12px 24px;
+        }
+
+        p{
+          @include p-bold($light);
+        }
+
+        &:hover{
+          border-bottom: 0px solid $primary-blue;
+        }
+      }
+
+      &:hover{
+        color: $primary-blue;
+        border-bottom: 8px solid $primary-blue;
+      }
+    }
+
+    &.search{
+      a:hover{
+        border-bottom: 0px solid $primary-blue;
+      }
+    }
+
+    &.has-dropdown{
+      a:hover{
+        color: $primary-blue;
+        border-bottom: 0px solid $primary-blue;
+      }
+    }
+  }
+}
+
+
+.nav-menu .nav-item.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    z-index: 4000;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+
+  @include desktop {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    top: 100%;
+    left: -15px; //SAME AS PADDING
+    z-index: 1000;
+    padding: 50px 30px 40px;
+    width: 225px;
+    height: auto;
+  }
+
+
+  a:hover, a:hover p{
+    background: $light-gray !important;
+    transition:.3s;
+  }
+
+  &.mega{
+    overflow: scroll;
+
+    @include desktop {
+      width: 900px;
+      left: -500%;
+      overflow: visible;
+    }
+
+    > p{
+      margin-top: 10px;
+      margin-bottom: 20px;
+      line-height: 20px;
+      color: $navy-blue;
+      
+      b{
+        color: $navy-blue;
+      }
+
+      @include desktop {
+        margin-top: 0px;
+        line-height: inherit;
+      }
+    }
+
+    @include largedesktop{
+       left: -270%;
+    }
+
+    ul{
+      margin-top: 10px;
+
+      li{
+        a b{
+          @include p-bold($dark-gray);
+        }
+        a p b span{color: $primary-blue;}
+
+        a p{ display: inline;}
+        
+        a:hover, a:hover p{
+          background: $light-gray !important;
+          transition:.3s;
+        }
+
+        p.caption{
+           @include p($dark-gray);
+        }
+      }
+
+      @include desktop {
+        display: inline-block;
+        column-count: 2;
+
+        li{
+          break-inside: avoid; 
+          margin-bottom: 20px;
+          padding-right: 60px; // to make space
+            
+          a b{
+            @include p-bold($dark-gray);
+          }
+          a p b span{color: $primary-blue;}
+
+          a p{ display: inline;}
+          
+          a:hover, a:hover p{
+            background: $light-gray !important;
+            transition:.3s;
+          }
+        }
+      }
+    }
+  }
+
+  ul{
+    list-style: none;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    li{
+      margin: 0px;
+      padding: 0px;
+
+      &:last-child{margin-bottom:0px;}
+      
+      a{
+        @include p($dark-gray);
+        padding: 0px;
+        transition:.3s;
+      }
+
+      a:hover, a:hover p{
+        background: $light-gray !important;
+        transition:.3s;
+      }
+    }
+  }
+}
+
+//// SHOW DROP DOWN
+@include desktop{
+  .nav-menu .nav-item.has-dropdown:hover .dropdown {
+    display: block;
+  }
+
+  .quick-links-nav{
+      display:none;
+    }
+}
+
+@include desktop {
+  .nav-item a.active { 
+    @include p-bold($primary-blue);
+    border-bottom: 8px solid $primary-blue;
+  }
+}
+
+
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .navbar__toggle {
+    display: block;
+    z-index: 5000;
+  }
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  .nav-menu .nav-item {
+    width: 100%;
+  }
+  .nav-menu .nav-item .dropdown {
+    position: static;
+    background: #444;
+  }
+  .nav-menu .nav-item.open .dropdown {
+    display: block;
+  }
+  .nav-menu.open {
+    display: flex;
+
+  /// MOBILE NAV SET UP
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 4000;
+    padding: 15% 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .nav-menu .nav-item.open .dropdown{
+    /// MOBILE NAV SET UP
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 500000;
+    width: 100%;
+    padding:60px 20px;
+    box-sizing: border-box;
+  }
+
+  .quick-links-nav{
+    width: 100%;
+    gap: 10px;
+    display: grid;
+
+    div.flex-item{
+      a{
+        @include p-semi($dark-gray);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+.menu-trigger{
+  position: absolute;
+      top: 25px;
+    right: 13px;
+    width: 37px;
+    height: 25px;
+  border: 0px solid red;
+}
+
+
+
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+
+  @include desktop {
+    margin: 0px 0px;
+  }
+
+  .submit-button{
+    display:none;
+  }
+
+  button.search-toggle{
+    background: none;
+    border: none;
+    position: relative;
+    left: 7px;
+
+    z-index: 300000;
+
+     @include desktop {
+      left: 0px;
+     }
+  }
+}
+
+.search-input {
+    width: 230px;
+    height: 100%;
+    position: absolute;
+    top: -12px;
+    // padding: 10px 10px 10px 40px;
+    left: -3px;
+    opacity: 1;
+    border-radius: 4px;
+    z-index: 10000;
+    border-radius: 100px;
+    border: 2px solid $primary-blue;
+    @include p($dark-gray);
+
+    padding: 8px 10px 8px 40px;
+
+  @include desktop {
+    width: 0;
+    opacity: 0;
+    padding: 5px 10px;
+    transition: width 0.3s ease;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    z-index: 10000;
+    position: absolute;
+    top: -12px;
+    left: -20px;
+  }
+}
+
+.search-container.active .search-input {
+    opacity: 1;
+    padding: 5px 10px;
+    transition: width 0.3s ease;
+    position: absolute;
+    top: -12px;
+    left: -13px;
+
+    width: 320px;
+    z-index: 30000;
+    height: 100%;
+    padding: 10px 10px 10px 40px;
+    border-radius: 100px;
+    border: 2px solid $primary-blue;
+
+    @include p($dark-gray);
+}
+
+
+
+#emergency-bar {
+  background: #490E0A;
+      position: relative;
+  background: linear-gradient(90deg, rgba(73, 14, 10, 1) 0%, rgba(156, 27, 19, 1) 80%);
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap:20px;
+  padding: 20px $sidepad-mob;
+ 
+  @include tablet {
+    padding: 20px $sidepad-mob;
+  }
+
+  @include desktop {
+    padding: 20px $sidepad-desk;
+  }
+
+  @include largedesktop {
+     padding: 20px $sidepad-desk;
+  }
+  
+  @include xlargedesktop {
+     padding: 20px 10%;
+  }
+
+  @include tablet{
+    grid-template-columns: 1fr 5fr;
+  }
+ 
+  h6{
+    @include h6($white);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p{
+    @include p($white);
+  }
+
+  div img{
+    max-width: 100%;
+    border-radius:20px;
+  }
+
+  a.button{
+    margin-top: 10px;
+    @include button($light-blue, $primary-blue, solid);
+
+    &:hover{
+      @include button($white, $primary-blue, solid);
+      background-color: $white !important;
+    }
+  }
+
+  #close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: none;
+    background: transparent;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+
+    @include tablet{
+      top: 35px;
+      right: 50px;
+    }
+  }
+}

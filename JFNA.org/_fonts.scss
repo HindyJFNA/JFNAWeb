@@ -1,0 +1,504 @@
+
+	@mixin h1($color){
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 44px;
+		letter-spacing: 0%;
+		color: $color;
+		text-align: center;
+
+		@include desktop{
+			font-size: 70px;
+			line-height: 91px;
+		} 
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl; 
+		}
+	}
+
+	@mixin h2($color){
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 42px;
+		letter-spacing: 0%;
+		color: $color;
+
+		@include desktop {
+			font-size: 60px;
+			line-height: 78px;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin h3($color) {
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 130%;
+		letter-spacing: 0%;
+		color: $color;
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+
+		@include desktop {
+			font-size: 45px;
+			line-height: 58.5px;
+		}
+
+		@include largedesktop{
+			line-height: 150%;
+		}
+	}
+
+	@mixin h4($color){
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 28px;
+		letter-spacing: 0%;
+
+		color: $color;
+
+		@include desktop{
+			font-size: 32px;
+			line-height: 42px;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin h5($color){
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 26px;
+		letter-spacing: 0%;
+		
+		color: $color;
+
+		@include desktop{
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin h6($color){ 
+		font-family: $outfit;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 130%;
+		letter-spacing: 0%;
+		color: $color;
+
+		@include desktop{
+			font-size: 20px;
+			line-height: 26px;	
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin p($color){ //light
+		font-family: $outfit;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0%;
+		color:$color;
+
+		@include desktop {
+			font-size: 18px;
+			line-height: 27px;
+		}
+
+		strong, em, b {
+			font-weight: 600;
+			color: $color;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin p-semi($color){ //semibold
+		font-family: $outfit;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0%;
+		color:$color;
+
+		@include desktop {
+			font-size: 18px;
+			line-height: 27px;
+		}
+
+		strong, em, b {
+			font-weight: 600;
+			color: $color;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin p-bold($color){ //semibold
+		font-family: $outfit;
+		font-weight: 600;
+		// font-size: 16px;
+		// line-height: 24px;
+		letter-spacing: 0%;
+		color:$color;
+
+		@include desktop {
+			// font-size: 18px;
+			// line-height: 27px;
+		}
+
+		strong, em, b {
+			font-weight: 600;
+			color: $color;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+
+	@mixin p-large($color){ //large
+		font-family: $outfit;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 26px;
+		letter-spacing: 0%;
+		color:$color;
+
+		strong, em, b {
+			font-weight: 600;
+			color: $primary-blue;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 150%;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 400;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+	@mixin caption($color){ //caption
+		font-family: $outfit;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 12px;
+		letter-spacing: 0%;
+		color: $color;
+
+		margin-top: 3px; // for nav specifically?
+		
+		@include desktop {
+			font-size: 15px;
+			line-height: 150%;
+
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+
+		@mixin label($color){ //label
+			font-family: $outfit;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 150%;
+			letter-spacing: 0%;
+			color: $color;
+			
+			@include desktop {
+				font-size: 16px;
+				line-height: 150%;
+
+			}
+		}
+	
+
+h1{@include h1($primary-blue);}
+h2{@include h2($primary-blue);}
+h3{@include h3($primary-blue);}
+h4{@include h4($primary-blue);}
+h5{@include h5($navy-blue);}
+h6{@include h6($dark-gray);}
+p{@include p($dark-gray);}
+p.large{@include p-large($dark-gray);}
+p.caption{@include caption($dark-gray);}
+
+
+
+
+.rich-text, .page.page-main{
+  h1{@include h1($light);}
+  h2{@include h2($primary-blue);}
+  h3{@include h3($light-blue);}
+  h4{@include h4($primary-blue);}
+  h5{@include h5($navy-blue);}
+  h6{@include h6($dark-gray);}
+  p{@include p($dark-gray);}
+  p.large{@include p-large($dark-gray);}
+	p.caption{@include caption($dark-gray);}
+
+	p a{ color: $primary-blue;}
+
+
+  // p b, p strong{@include p-bold($primary-blue);}
+
+  ul li {
+  	@include p($dark-gray);
+  }
+}
+
+
+
+//// ??????
+	a.button{
+		padding: 12px 24px;
+		border-radius: 30px;
+
+		span{
+			font-family: $outfit;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 27px;
+			letter-spacing: 0%;
+			text-align: center;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+
+//// ??????
+	p a {
+		font-family: $outfit;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0%;
+
+		&:hover{
+			text-decoration: none;
+		}
+
+		&.hebrew{
+			font-family: $hebrew !important;
+			font-weight: 600;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+
+
+
+
+
+@mixin underscore($tag) {
+display: table;
+padding-bottom:10px;
+margin-left: 0;
+
+  @if $tag == center {
+    border-bottom: 8px solid $primary-blue;
+    margin: 0 auto;
+  }  
+
+  @else if $tag == left {
+    border-bottom: 8px solid $primary-blue;
+    margin-left: 0;
+  } 
+
+  @else if $tag == right {
+    border-bottom: 8px solid $primary-blue;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  @else if $tag == diff {
+    border-bottom: 6px solid $medium-blue;
+    margin-left: 0;
+  } 
+
+  @else if $tag == light {
+    border-bottom: 6px solid $light-blue;
+  } 
+
+  @else if $tag == p {
+    border-bottom: 4px solid $medium-blue;
+  } 
+
+  @else if $tag == h5 {
+    border-bottom: 8px solid $primary-blue;
+    margin: 0 auto;
+  }
+
+  @else if $tag == white {
+    border-bottom: 8px solid $light-blue;
+    margin: 0 auto;
+    color: $white;
+  }
+
+  @else if $tag == onblue {
+    border-bottom: 8px solid $medium-blue;
+    margin: 0 auto;
+    color: $white;
+  }
+}
+
+
+h4.section-header {
+  @include underscore(center);
+}
+
+h4.section-header-white {
+	@include h4($white);
+  @include underscore(white);
+}
+
+h4.section-header-center {
+  @include underscore(center);
+  margin-bottom:40px;
+}
+
+h4.section-header-left {
+  @include underscore(left);
+}
+
+h4.section-header-right {
+  @include underscore(right);
+}
+
+h5.section-header {
+  @include underscore(center);
+  color: $primary-blue !important;
+}
+
+h5.section-header-center {
+  @include underscore(center);
+  margin-bottom:40px;
+}
+
+h5.section-header-left {
+  @include underscore(left);
+  color: $primary-blue !important;
+}
+
+h5.section-header-right {
+  @include underscore(right);
+}
+
+.make-a-difference h4.section-header, h4.section-header-diff {
+  @include underscore(diff);
+}
+
+.bg-navy-blue h4.section-header-center, .bg-navy-blue h4.section-header {
+  @include underscore(onblue);
+  color: $white !important;
+}
+
+
+
+
+
+h5.section-header {
+  @include underscore(h5);
+}
+
+p.section-header, p.eyebrow{
+  @include underscore(p);
+}
+
+p.eyebrow{
+		@include p-bold($primary-blue);
+  	@include underscore(p);
+ 		margin-right: auto;
+		margin-left: 0px;
+}
+
+
+
+// SETS THE HIGHLIGHT IN RICH TEXT BOX FOR EMPHASIZE COLOR
+mark{
+	color: $medium-blue !important;
+	background-color: transparent !important;
+}
+
+
+// SETS THE HIGHLIGHT IN RICH TEXT BOX FOR EMPHASIZE COLOR
+b mark, mark b{
+	color: $primary-blue !important;
+	background-color: transparent !important;
+}
+
+
+
+
+

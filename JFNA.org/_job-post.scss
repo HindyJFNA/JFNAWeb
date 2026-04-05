@@ -1,0 +1,39 @@
+section.page-main.career-center-listing{
+	background: $light;
+
+	.shell > .row:first-of-type{
+		margin-top: 75px;
+	}
+
+	.section-template-rows{
+		.row{
+			.navbar{
+				position: absolute;
+			    top: 0;
+			    width: 100%;
+				left: 0;
+			}
+		}
+	}
+}
+
+
+section.page-main .shell.jobs-home-nav{
+	.row{
+		padding: 0px;
+	}
+}
+
+
+section.page-main .shell.jobs-home-header{
+	.row{
+		padding: 0px;
+	}
+}
+
+.job-submit{
+	a.cta-btn{
+		@include button($primary-blue, $primary-blue, outline);
+	}
+}
+

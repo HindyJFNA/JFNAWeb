@@ -1,0 +1,139 @@
+///// ///// ///// ///// ///// ///// ///// ///// ///// ///// 
+///// ///// ///// ///// ///// ///// ///// ///// ///// ///// 
+///// THIS IS MOSTLY THINGS THAT UNDO THE EXISTING FEDWEB CODE GLOBALLY
+///// ///// ///// ///// ///// ///// ///// ///// ///// ///// 
+///// ///// ///// ///// ///// ///// ///// ///// ///// ///// 
+
+
+h1, h2, h3, h4, h5, h6, p {
+  font-variant-ligatures: none;
+}
+
+.col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9{
+	margin:0px;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
+
+.col-12{
+	width:100%;
+}
+
+.page-main .component-divider.component-divider{
+	padding-top: 70px;
+}
+
+.shell{
+	max-width: none !important;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.hovering-side-bar{margin-top: 0px !important;}
+
+
+.shell.full-width-shell{
+	width:100%;
+	@include desktop {
+		max-width: none;
+	}
+}
+
+.row{
+	margin-left: 0px;
+}
+
+.component-promo:not(.btn-anchored).overlay-horizontal-position-middle.overlay-vertical-position-bottom .bg-type-image {
+    bottom: 0;
+    left: 0;
+    transform: none;
+}
+
+.page-main{
+	padding: 0px;
+}
+
+//header.page-header{display: none;}
+.header-wrap, .navs, div.navs nav{display:none;}
+.page-wrapper{margin-top: 0px !important;}
+
+
+.component-container>:last-child {
+	margin-bottom: 0px !important;
+}
+
+.hovering-side-bar{
+	margin-top: 0px;
+}
+
+a{
+	transition: .3s;
+}
+
+.mobile-only{
+	@include tablet {
+		display: none;
+	}
+}
+
+.mobile-hide-btn{
+	.row .col-12 .component-button .button.btn-black{
+		display: none !important;
+
+		@include tablet {
+			display: block !important;
+		}
+	}
+}
+
+.mobile-only .row .col-12 .component-button .button.btn-black{
+	margin-top: 0px;
+}
+
+
+/// added for privacy and terms
+body.page-type-privacy, body.page-type-terms{
+	section.page-main{
+		@include responsive-padding;
+
+		article p{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// 404 page
+
+body.page-type-error{
+
+	.page-main.error-page {
+		height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        width: 75%;
+
+    br:first-child{
+    	display:none;
+    }
+  }
+	.page-main.error-page h2{
+		@include h3($primary-blue);
+	}
+
+	.page-main.error-page p{
+		@include p-large($text);
+
+		a{
+			@include p-large($text);
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+

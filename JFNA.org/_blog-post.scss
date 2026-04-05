@@ -1,0 +1,764 @@
+section.page-main{
+	background: $light;
+
+	h6.eyebrow{
+		@include h5($medium-blue);
+		font-weight: 600;
+		margin-bottom: 20px;
+
+		a{
+			color: $medium-blue;
+			text-decoration: none;
+
+			&:hover{
+				text-decoration: none;
+				color: $primary-blue;
+			}
+		}
+
+		@include desktop{
+			margin-bottom: 30px;
+		}
+	}
+
+	.row{
+		header.page-title{
+			margin-bottom: 0px;
+		}
+	}
+
+	.col-7{
+		width: 100%;
+	}
+
+	.shell {
+		> .row{
+			@include responsive-padding;
+
+			padding-bottom: 0px !important;
+
+			section, aside{
+				@include responsive-padding;
+				padding-top: 0px !important;
+				padding-bottom: 0px !important;
+			}
+		}
+
+		> .row:first-of-type{
+
+		}
+
+		> .row{
+			display:grid;
+			padding-top: 0px !important;
+			.col-7{order:2;}
+			.col-3{order:1;}
+		} 
+	}
+
+	aside{
+		width: 100%;
+
+		div.widget:first-child{
+
+			position:relative;
+
+			/// THIS IS THE SEE ALL TAGS
+			button#link_more{ 
+				display: none;
+			}
+
+			/* Hide the dropdown initially */
+			#list_tags {
+				position: absolute;
+				background: white;
+			    display: flex;
+			    flex-direction: column;
+			    border-radius: 8px;
+			    // padding: 15px;
+			    gap: 5px;
+
+			  max-height: 0;
+			  overflow: hidden;
+			  transition: max-height 0.3s ease;
+			}
+
+			#list_tags li{
+
+			}
+
+			#list_tags li a{
+				background: none;
+				@include label($navy-blue);
+
+				&:hover{
+					background: $light-gray;
+				}
+			}
+
+			.num{display: none;}
+
+			/* Show it when expanded */
+			#list_tags.expanded {
+			  max-height: 1000px; /* adjust as needed */
+			  position: absolute;
+			   
+			    background: white;
+			    display: flex;
+			    flex-direction: column;
+			    border-radius: 8px;
+			    padding: 15px;
+			    gap: 5px;
+			    box-shadow: $hover-shadow;
+
+			    top: 60px;
+			    height: 300px;
+			    overflow: scroll;
+			}
+
+			/* Make <h4> clickable and styled */
+			h4 {
+			  position: relative;
+			  cursor: pointer;
+			  padding-left: 1.5em;
+			  user-select: none;
+			  transition: .3s;
+
+			    border: 1px solid $gray;
+			    padding: 12px 50px 12px 30px;
+			    border-radius: 24px;
+			    display: inline-block;
+			    text-transform: none;
+
+			    @include label($dark-gray);
+
+			    &:hover{
+					background: $light-blue;
+					transition: .3s;
+				}
+			}
+
+			/* Add dropdown arrow via ::before */
+			h4::after {
+			  	content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%206L6%200L12%206L10.6%207.4L6%202.8L1.4%207.4L0%206Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+				position:absolute;
+				right: 25px;
+    			transform: rotate(180deg);
+			  	transition: transform 0.3s ease;
+			}
+
+			/* Rotate arrow when active */
+			h4.active::after {
+			  transform: rotate(0deg);
+			}
+		}
+	}
+
+	.news{
+		.entry{
+			padding: 20px 0px;
+
+			@include tablet{
+				padding: 40px 0px;
+			}
+
+			.row{
+				display: flex;
+			    justify-content: flex-start;
+			    width: 100%;
+
+				.col-2{
+					grid-area: date;
+					.meta{
+						
+						p a.date{
+							@include p-bold($dark-gray);
+							background: none;
+							padding-left:0px;
+						}
+
+						p{
+						 margin-bottom: 0px;
+						}
+
+						.tags{display: none;}
+					}
+				}
+
+				ul.tags{
+					margin-top: 0;
+					display:none;
+					
+					li{
+						background: transparent;
+						    margin: 0px;
+					}
+					
+					a{
+						padding: 0px;
+						margin-right: 20px;
+						@include h6($medium-blue);
+						font-weight: 500;
+						background: transparent;
+
+						.num{display: none;}
+					}
+				}
+
+				
+				.col-5, .col-6-mobile{
+					display: grid;
+					grid-template-areas: 
+						"image" 
+						"tags" 
+						"title"
+						"date"
+						"text"
+						"link";
+					grid-template-columns: 1fr;
+				    grid-template-rows: min-content;
+					width: 100%;
+
+					@include tablet{
+						display: grid;
+						grid-template-areas: 
+							"image tags" 
+							"image title"
+							"image date"
+							"image text"
+							"image link";
+						grid-template-columns: auto 1fr;
+					    grid-template-rows: auto auto auto auto;
+					    align-items: center;
+					   	column-gap: 40px;
+						width: 100%;
+					}
+
+
+
+
+					h2, h2 a{
+						align-self: end;
+						order:2; grid-area: title;
+						@include h5($navy-blue);
+						transition: .3s;
+						margin-bottom: 0px;
+					}
+					
+					h2 a:hover{
+						text-decoration: none;
+						color: $medium-blue;
+						transition: .3s;
+					}
+
+					a{
+						order: 1; 
+						grid-area: image; 
+						border-radius: 24px;
+						overflow: hidden;
+						img{margin-bottom: 0px;}
+					}
+
+					ul.tags{
+						grid-area: tags; 
+					}
+
+					> p:nth-of-type(2){
+						order: 3; 
+						grid-area: text; 
+						margin-bottom:0px;
+						align-self: start;
+					}	
+
+					> p:nth-of-type(3), > p:nth-of-type(4){
+						display: none;
+					}	
+
+					> p:last-child{
+						display: block; 
+						grid-area: link;
+					}
+
+					br{display:none;}
+
+					p.arrow-btn{
+						@include arrow-btn($primary-blue);
+					}
+
+					p{
+						margin-bottom: 0px;
+						margin: 10px 0px;
+					}
+
+					p a{
+						@include p-bold($dark-gray);
+					}
+
+					// > p:not(:nth-of-type(2)), > p:not(.arrow-btn){display:none;}
+
+					.byline {display: none;}
+					.col-2{ 
+						grid-area: date;
+						margin: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	nav.paging{
+		text-align:center;
+		ul.right{
+			margin: 0 auto;
+			float: none;
+
+			li{
+				a{
+					background: $white;
+					@include p($dark-gray);
+					border: 0px;
+					padding:0px;
+					height: 32px;
+					width: 32px;
+					display: flex;
+					align-items:center;
+					justify-content: center;
+					border-radius: 100%;
+					transition:.3s;
+
+					&.current{
+						background: $primary-blue;
+						@include p($light);
+						&:hover{background: $primary-blue;}
+					}
+
+					&:hover{
+						background: $light-gray;
+						transition:.3s;
+					}
+				}
+
+				a.next, a.prev {
+					position: relative;
+					font-size: 0px;
+					text-indent: 0px;
+
+					&::before {
+						position: absolute;
+					 	content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%206L6%200L12%206L10.6%207.4L6%202.8L1.4%207.4L0%206Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+					  	width: auto;
+					  	height: auto;
+					  	left:6px;
+					  	transform: rotate(90deg);
+					  	transition:.3s;
+					}
+				}
+
+				a.prev{
+					&::before {
+						left:14px;
+						transform: rotate(270deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.entry-thumbnail {
+	.entry-thumbnail{
+		float: none;
+	}
+	img{
+		margin: 0px;
+		max-width: none;
+		width: 100%;
+		border-radius: 24px;
+		height: auto;
+		max-height: none;
+	}
+}
+
+.article img, .article p img{
+	padding: 0px;
+	margin-top: 0px;
+	border-radius: 24px;
+}
+
+
+
+
+
+
+
+section.page-main{
+	background: $light;
+
+	.section-template-rows{
+		> .row:last-child{
+			.navbar{
+				position: absolute;
+			    top: 0;
+			    width: 100%;
+				left: 0;
+			}
+		} 
+
+		.feature-posts{
+			background: $light-gray;
+		}
+	}
+
+		
+	.row{
+		header.page-title{
+
+			@include responsive-padding;
+
+			margin-bottom: 30px;
+			padding-bottom: 0px !important;
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+			// padding-top: 0px !important;
+
+			.byline{margin-top:10px;}
+			.byline .author, .byline a, .byline address.author{
+				@include p($dark-gray);
+				font-style: normal;
+				font-weight: 300;
+			}
+
+			h2{
+				max-width: 85%;
+			}
+		}
+	}
+
+	.col-7{
+		width: 100%;
+	}
+
+	.shell {
+		// margin-top: 70px;
+
+		> .row{
+			@include responsive-padding;
+			padding-bottom: auto !important;
+
+			section, aside{
+			}
+		}
+
+		// > .row:nth-child(2){
+		> .row{
+			display:grid;
+			grid-template-columns: 1fr;
+			padding-top: 0px;
+			
+			.col-8{
+				order:2;
+				width: 100%;
+				padding: 0px;
+
+				article.article {
+				    margin: 0 auto;
+				    display: grid;
+					gap: 50px;
+
+					width: 65%;
+
+				    .editor-copy{
+				    	max-width: 650px;
+				    	display: grid;
+    					margin: 0 auto;
+
+    					ul li span, p, ul li{
+    						@include p($dark-gray);
+
+    						a {
+	    						@include p-bold($primary-blue);
+	    						&:hover{
+	    							@include p-bold($navy-blue);
+	    							text-decoration: none;
+	    						}
+	    					}
+    					}
+
+    					ul{
+    						margin-left: 10px;
+
+    						li{
+    							margin-bottom:10px;
+    						}
+							li::marker{
+								font-size: 10px;
+							}
+    					}
+
+
+
+    					> p:first-child{
+    						@include p-large($dark-gray);
+    					}
+
+    					blockquote {
+						    background: $light-gray;
+						    border-left: 5px solid $gray;
+						    display: block;
+						    margin: 5px 0px 5px 0px;
+						    border-radius: 0px;
+						    padding: 15px 21px;
+
+						    p, p span{
+						    	@include p-bold($dark-gray);
+						    	line-height: 120%;
+						    }
+						}
+				    }
+				}
+
+				.section-template-items {
+					max-width: 800px;
+    				margin: 0 auto;
+    				@include responsive-padding;
+				}
+			}
+
+			.col-3{
+				order:1;
+				@include responsive-padding;
+				padding-bottom: 0px !important;
+				padding-top: 0px !important;
+
+				    width: 100%;
+
+				// .widget:last-child{
+				// 	display:none;
+				// }
+
+				.widget {
+					display: flex;
+    				justify-content: space-between;
+    				align-items: baseline;
+    				border-bottom: 1px solid $light-gray;
+    				padding-bottom: 50px;
+    				margin-bottom: 50px;
+    				flex-direction: column;
+
+    				gap: 20px;
+
+    				@include tablet {
+    					flex-direction: row;
+    					align-items: flex-end
+    				}
+
+    				.buttons{display: none;}
+
+					.headers {
+						margin-bottom: 0px;
+						li{
+							margin-bottom: 10px;
+							a{
+								@include h6($dark-gray);
+								font-weight: 600;
+								i{display: none;}
+							}
+						}
+
+							.byline{margin-top:10px;}
+							.byline .author, .byline a, .byline address.author{
+								@include p($dark-gray);
+								font-style: normal;
+								font-weight: 300;
+							}
+					}
+
+					ul.tags li a{
+						background: $light;
+						padding: 10px 25px;
+						border: 1px solid $gray;
+						border-radius: 24px;
+						@include label($dark-gray);
+						transition: .3s;
+
+						.num{display: none;}
+
+						&:hover{
+							background: $light-gray;
+							transition: .3s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.entry-thumbnail {
+	.entry-thumbnail{
+		float: none;
+	}
+	img{
+		margin: 0px;
+		max-width: none;
+		width: 100%;
+		border-radius: 24px;
+		height: auto;
+		max-height: none;
+	}
+}
+
+
+.article img, .article p img{
+	padding: 0px;
+	margin-top: 0px;
+	border-radius: 24px;
+	border: 1px solid $light-gray;
+}
+
+article p{ 
+	margin-bottom:0px;
+	a{
+		@include p-bold($primary-blue);
+		transition: .3s;
+		&:hover{
+			color: $medium-blue;
+			transition: .3s;
+		}
+	}
+}
+
+
+nav.post-nav{
+	display:none;
+}
+
+.back-btn{
+	margin: 50px 0;
+}
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+///////////////////////////////
+///////////////////////////////     New for Tag list
+///////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+.tag-page{
+	section.page-main .shell{
+		// margin-top:70px;
+	}
+
+	//BACK BUTTON
+	.page-title p.back{
+			margin-top:70px;
+	}
+	.navbar{
+		position: absolute;
+	    top: 0;
+	    width: 100%;
+		left: 0;
+	}
+
+	.page-title h3{
+		display: none;
+	}
+	// section.page-main .shell > .row:nth-child(2) .col-8{
+	section.page-main .shell > .row .col-8{
+			@include responsive-padding;
+		}
+
+	.list .entry{
+		background: transparent !important;
+	}
+
+	.news .entry h3 a{
+		@include h5($navy-blue);
+
+		&:hover{
+			@include h5($medium-blue);
+			text-decoration: none;
+		}
+	}
+
+	.list .entry .meta{
+		padding-left: 0px;
+	}
+
+	.news .entry p a.date{
+		@include p-bold($dark-gray);
+		padding-left: 0px;
+	}
+
+	.news .entry .row{
+    	flex-direction: column;
+    	    gap: 10px;
+
+    	.col-5{
+			display: inline-block !important;
+
+			.arrow-btn{
+				margin-top: 20px;
+			}
+    	}
+	}
+
+
+	section.page-main .shell > .row .col-3 .widget{
+		border-bottom: 0px;
+		padding-bottom: 0px;
+	}	
+}
+
+
+
+
+/// THIS REMOVES PADDING FROM HOME BLOG NAV SIDES
+
+section.page-main .shell.home-blog-nav{
+	.row{
+		padding: 0px !important; 
+		.col-12{
+			padding: 0px !important; 
+		}
+	}
+}
+
+
+/// THIS REMOVES PADDING FROM RECENT ARTICLES 
+
+section.page-main .shell.feature-posts{
+	.row{
+		padding: 0px !important; 
+	}
+}
+
+
+.widget ul.tags li{
+	text-transform: capitalize !important;
+	
+	a{
+		min-width: 20px;
+	}
+}
+
+

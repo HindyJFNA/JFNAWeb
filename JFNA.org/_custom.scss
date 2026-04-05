@@ -1,0 +1,882 @@
+.page-main.error-page{
+	height: 45vh;
+
+	h2{
+		@include h1($primary-blue);
+	}
+
+	p{
+		@include h3($navy-blue);
+	}
+}
+
+
+.extra-padding{
+  .row{
+    @include responsive-padding;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+
+
+.spacer{
+  padding-bottom: 0px !important;
+}
+
+.spacer-row{
+	> .row{
+		padding-bottom: 0px !important;
+	}
+}
+
+
+.no-top-pad{
+	padding-top: 0px !important;
+}
+
+
+
+
+/////////////////////////////////
+/////////////////////////////////
+/// ROW WITH CLASS - STYLES THE WHOLE ROW WITH BACKGROUND COLOR 
+/////////////////////// AND ALSO WITH TEXT COLORS  
+/////////////////////////////////
+/////////////////////////////////
+
+
+// ADD THESE CLASSES TO THE ROW OR ATTRIBUTE
+
+.bg-primary-blue{ @include bg-color($primary-blue);}
+.bg-medium-blue{ @include bg-color($medium-blue);}
+.bg-navy-blue{ @include bg-color($navy-blue);}
+.bg-light-blue{ @include bg-color($light-blue);}
+.bg-pale-blue{ @include bg-color($pale-blue);}
+.bg-light{ @include bg-color($light);}
+.bg-white{ @include bg-color(#ffffff);}
+.bg-gray{ @include bg-color($gray);}
+.bg-light-gray{ @include bg-color($light-gray);}
+.bg-footer-gray{ @include bg-color($text);}
+
+
+// .bg-navy-blue.gray-card .rich-text{
+//   h1{@include h1($primary-blue);}
+//   h2{@include h2($primary-blue);}
+//   h3{@include h3($primary-blue);}
+//   h4{@include h4($primary-blue);}
+//   h5{@include h5($navy-blue);}
+//   h6{@include h6($navy-blue);}
+//   p{@include p($dark-gray);}
+//   p.eyebrow{@include p-semi($primary-blue);}
+// }
+
+/////////////////////////////////
+/////////////////////////////////
+/// ROW WITH CLASS - STYLES THE WHOLE ROW INTO A CARD
+/////////////////////////////////
+/////////////////////////////////
+
+
+//// ROW NAME
+.white-card, .bg-navy-blue .white-card{
+	@include card($white);
+
+	.row .rich-text{
+		margin-bottom: 0px;
+	}
+
+	&.features{
+		.rich-text{
+			padding: 0px;
+		}
+	}
+}
+
+//// ROW NAME
+.blue-card{
+	@include card($primary-blue);
+	.row .rich-text{
+		margin-bottom: 0px;
+	}
+}
+
+
+//// ROW NAME
+.gray-card, .bg-navy-blue .gray-card{
+	@include card($light);
+	.row .rich-text{
+		margin-bottom: 0px;
+	}
+}
+
+
+//// ROW NAME
+.lightblue-card{
+	@include card($light-blue);
+	.row .rich-text{
+		margin-bottom: 0px;
+	}
+}
+
+
+// ROW NAME
+.container.promo-text{
+	h1, h2, h3, h4, h5, h6, p, p a, a{
+		color: $light;
+		margin:0px;
+	}
+
+	p{
+		display: inline-block; /* Ensures border fits text width */
+		padding-bottom:10px;
+		border-bottom: 4px solid $medium-blue;
+	}
+}
+
+
+
+
+
+@include desktop {
+	.rich-text{
+		p.align-center, h4.align-center, h5.align-center, h6.align-center{max-width: 75%;}
+	}
+}
+
+@include largedesktop {
+	.rich-text{
+		p.align-center, h4.align-center, h5.align-center, h6.align-center{max-width: 70%;}
+	}
+}
+
+
+
+
+
+
+
+.about-us-header{
+	.bg-overlay{
+		width: 100%;
+	    box-sizing: border-box;
+	    @include responsive-padding();
+	}
+
+	.component-promo{
+  		position: relative;
+	  	display: inline-block;
+	  	
+	  	height: 320px;
+
+	  	    margin-bottom: -6px !important;
+
+	  	@include desktop {
+	  		height: 520px;
+	  	}
+
+	  	div.has-ratio{
+	  		height:100%;
+	  	}
+		img {
+		  object-fit:cover;
+		  object-position: center !important;
+		  min-height:100%;
+		   min-width:100%;
+
+		   position: relative;
+		    transform: none;
+		    translate: -50% -50%;
+		    z-index: -1;
+		}
+
+		.promo-text p{
+	 		@include p-bold($light);
+	 	}
+
+	 	.promo-text h1{
+	 		@include h1($light);
+	 		text-align: left;
+	 	}
+
+		.promo-title p strong{
+			@include p-bold($light);
+		}
+
+		 &::after {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: linear-gradient(180deg, rgba(9, 14, 32, 0.00) 17.76%, rgba(9, 14, 32, 0.18) 34.21%, rgba(9, 14, 32, 0.60) 54.77%, rgba(9, 14, 32, 0.80) 100%);
+		    pointer-events: none; // Ensures overlay doesn't interfere with interactions
+		}
+	}
+
+
+	@include tablet {
+		&.pushdown{
+			.component-promo{
+				img {
+				    translate: -50% -42%;
+				}
+			}
+		}
+
+		&.pushup{
+			.component-promo{
+				img {
+				    translate: -50% -62%;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.component-icon-row{
+	margin-top: 30px;
+	padding-top: 0px;
+
+	.flex-container{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 20px;
+		// grid-template-columns: 1fr;
+
+		@include tablet {
+			// grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		@include desktop {
+			flex-direction: row;
+			// grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	.icon-row-item{
+		padding:0px;
+		background: $primary-blue;
+		padding: 40px 16px;
+		border-radius: 24px;
+		flex:1;
+
+    	@include desktop {
+    		padding: 54px 16px;
+    	}
+
+		.text{
+			padding:0px;
+			text-align: center;
+			display: flex;
+		    flex-direction: column;
+		    gap: 10px;
+		    margin: 0px;
+
+			*{
+				color: $light;
+				margin:0px;
+				text-transform: none;
+			}
+
+			p{
+				font-weight:300;
+			}
+
+			h4{
+				@include h3($light);
+			}
+
+			@include desktop {
+				gap: 20px;
+			}
+		}
+	}
+}
+
+
+
+
+.bg-navy-blue, .bg-primary-blue{
+	.icon-row-item{
+
+		background: $light-blue;
+
+		.text{
+			*{
+				color: $primary-blue;
+				margin:0px;
+				text-transform: none;
+			}
+
+			h4{
+				color: $primary-blue;
+			}
+
+			p{
+				color: $dark-gray;
+			}
+		}
+	}
+}
+
+/// Livesecure icon replace
+
+.fa-handshake-o::before{
+	content: url("data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M23.25%2034.0007L33.1666%2030.9173C33.0277%2030.6673%2032.8263%2030.452%2032.5625%2030.2715C32.2986%2030.0909%2032%2030.0007%2031.6666%2030.0007H23.25C22.5%2030.0007%2021.9027%2029.9729%2021.4583%2029.9173C21.0138%2029.8618%2020.5555%2029.7507%2020.0833%2029.584L17.7083%2028.7923C17.2638%2028.6534%2016.9444%2028.3757%2016.75%2027.959C16.5555%2027.5423%2016.5277%2027.1118%2016.6666%2026.6673C16.8055%2026.2229%2017.0763%2025.8965%2017.4791%2025.6882C17.8819%2025.4798%2018.3055%2025.4451%2018.75%2025.584L20.5%2026.1673C20.9722%2026.3062%2021.5069%2026.4173%2022.1041%2026.5007C22.7013%2026.584%2023.5138%2026.6395%2024.5416%2026.6673H25C25%2026.3618%2024.9097%2026.0701%2024.7291%2025.7923C24.5486%2025.5145%2024.3333%2025.334%2024.0833%2025.2507L14.3333%2021.6673H11.6666V30.834L23.25%2034.0007ZM22.375%2037.2507L11.6666%2034.2507C11.4444%2034.9729%2011.0069%2035.5562%2010.3541%2036.0007C9.70135%2036.4451%209.02774%2036.6673%208.33329%2036.6673H4.99996C4.08329%2036.6673%203.29857%2036.3409%202.64579%2035.6882C1.99301%2035.0354%201.66663%2034.2507%201.66663%2033.334V21.6673C1.66663%2020.7507%201.99301%2019.9659%202.64579%2019.3132C3.29857%2018.6604%204.08329%2018.334%204.99996%2018.334H14.3333C14.5277%2018.334%2014.7222%2018.3548%2014.9166%2018.3965C15.1111%2018.4382%2015.2916%2018.4868%2015.4583%2018.5423L25.25%2022.1673C26.1666%2022.5007%2026.9097%2023.084%2027.4791%2023.9173C28.0486%2024.7507%2028.3333%2025.6673%2028.3333%2026.6673H31.6666C33.0555%2026.6673%2034.2361%2027.1257%2035.2083%2028.0423C36.1805%2028.959%2036.6666%2030.1673%2036.6666%2031.6673C36.6666%2032.2784%2036.5069%2032.7576%2036.1875%2033.1048C35.868%2033.452%2035.375%2033.7368%2034.7083%2033.959L24.2916%2037.209C23.9861%2037.3201%2023.6666%2037.3757%2023.3333%2037.3757C23%2037.3757%2022.6805%2037.334%2022.375%2037.2507ZM4.99996%2033.334H8.33329V21.6673H4.99996V33.334ZM26.6666%2020.334C26.25%2020.334%2025.8402%2020.2576%2025.4375%2020.1048C25.0347%2019.952%2024.6666%2019.7229%2024.3333%2019.4173L19.75%2014.9173C18.8888%2014.084%2018.1597%2013.1604%2017.5625%2012.1465C16.9652%2011.1326%2016.6666%2010.0284%2016.6666%208.83398C16.6666%207.30621%2017.2013%206.0076%2018.2708%204.93815C19.3402%203.86871%2020.6388%203.33398%2022.1666%203.33398C23.0555%203.33398%2023.8888%203.52148%2024.6666%203.89648C25.4444%204.27148%2026.1111%204.77843%2026.6666%205.41732C27.2222%204.77843%2027.8888%204.27148%2028.6666%203.89648C29.4444%203.52148%2030.2777%203.33398%2031.1666%203.33398C32.6944%203.33398%2033.993%203.86871%2035.0625%204.93815C36.1319%206.0076%2036.6666%207.30621%2036.6666%208.83398C36.6666%2010.0284%2036.375%2011.1326%2035.7916%2012.1465C35.2083%2013.1604%2034.4861%2014.084%2033.625%2014.9173L29%2019.4173C28.6666%2019.7229%2028.2986%2019.952%2027.8958%2020.1048C27.493%2020.2576%2027.0833%2020.334%2026.6666%2020.334ZM26.6666%2017.0007L31.2083%2012.5423C31.7361%2012.0145%2032.2222%2011.452%2032.6666%2010.8548C33.1111%2010.2576%2033.3333%209.58398%2033.3333%208.83398C33.3333%208.22287%2033.125%207.70898%2032.7083%207.29232C32.2916%206.87565%2031.7777%206.66732%2031.1666%206.66732C30.7777%206.66732%2030.4097%206.74371%2030.0625%206.89648C29.7152%207.04926%2029.4166%207.27843%2029.1666%207.58398L27.9583%209.04232C27.625%209.43121%2027.1944%209.62565%2026.6666%209.62565C26.1388%209.62565%2025.7083%209.43121%2025.375%209.04232L24.1666%207.58398C23.9166%207.27843%2023.618%207.04926%2023.2708%206.89648C22.9236%206.74371%2022.5555%206.66732%2022.1666%206.66732C21.5555%206.66732%2021.0416%206.87565%2020.625%207.29232C20.2083%207.70898%2020%208.22287%2020%208.83398C20%209.58398%2020.2222%2010.2576%2020.6666%2010.8548C21.1111%2011.452%2021.5972%2012.0145%2022.125%2012.5423L26.6666%2017.0007Z%22%20fill%3D%22%2327277C%22/%3E%3C/svg%3E");
+}
+
+.fa-graduation-cap:before, .fa-mortar-board:before{
+	content: url("data:image/svg+xml,%3Csvg%20width%3D%2236%22%20height%3D%2230%22%20viewBox%3D%220%200%2036%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7.08331%2024.6257C6.52776%2024.3201%206.0972%2023.9104%205.79165%2023.3965C5.48609%2022.8826%205.33331%2022.3062%205.33331%2021.6673V13.6673L1.33331%2011.459C1.02776%2011.2923%200.805535%2011.084%200.666646%2010.834C0.527757%2010.584%200.458313%2010.3062%200.458313%2010.0007C0.458313%209.6951%200.527757%209.41732%200.666646%209.16732C0.805535%208.91732%201.02776%208.70899%201.33331%208.54232L15.4166%200.875651C15.6666%200.736762%2015.9236%200.632596%2016.1875%200.563151C16.4514%200.493707%2016.7222%200.458984%2017%200.458984C17.2778%200.458984%2017.5486%200.493707%2017.8125%200.563151C18.0764%200.632596%2018.3333%200.736762%2018.5833%200.875651L34.4583%209.54232C34.7361%209.68121%2034.9514%209.8826%2035.1042%2010.1465C35.2569%2010.4104%2035.3333%2010.6951%2035.3333%2011.0007V21.6673C35.3333%2022.1395%2035.1736%2022.5354%2034.8542%2022.8548C34.5347%2023.1743%2034.1389%2023.334%2033.6667%2023.334C33.1944%2023.334%2032.7986%2023.1743%2032.4792%2022.8548C32.1597%2022.5354%2032%2022.1395%2032%2021.6673V11.834L28.6666%2013.6673V21.6673C28.6666%2022.3062%2028.5139%2022.8826%2028.2083%2023.3965C27.9028%2023.9104%2027.4722%2024.3201%2026.9166%2024.6257L18.5833%2029.1257C18.3333%2029.2645%2018.0764%2029.3687%2017.8125%2029.4382C17.5486%2029.5076%2017.2778%2029.5423%2017%2029.5423C16.7222%2029.5423%2016.4514%2029.5076%2016.1875%2029.4382C15.9236%2029.3687%2015.6666%2029.2645%2015.4166%2029.1257L7.08331%2024.6257ZM17%2016.1673L28.4166%2010.0007L17%203.83398L5.58331%2010.0007L17%2016.1673ZM17%2026.209L25.3333%2021.709V15.4173L18.625%2019.1257C18.375%2019.2645%2018.1111%2019.3687%2017.8333%2019.4382C17.5555%2019.5076%2017.2778%2019.5423%2017%2019.5423C16.7222%2019.5423%2016.4444%2019.5076%2016.1666%2019.4382C15.8889%2019.3687%2015.625%2019.2645%2015.375%2019.1257L8.66665%2015.4173V21.709L17%2026.209Z%22%20fill%3D%22%2327277C%22/%3E%3C/svg%3E");
+}
+
+.fa-shield:before{
+	content: url("data:image/svg+xml,%3Csvg%20width%3D%2228%22%20height%3D%2234%22%20viewBox%3D%220%200%2028%2034%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M11.5%2018.6673V21.1673C11.5%2021.6395%2011.6597%2022.0354%2011.9792%2022.3548C12.2986%2022.6743%2012.6944%2022.834%2013.1667%2022.834H14.8333C15.3055%2022.834%2015.7014%2022.6743%2016.0208%2022.3548C16.3403%2022.0354%2016.5%2021.6395%2016.5%2021.1673V18.6673H19C19.4722%2018.6673%2019.868%2018.5076%2020.1875%2018.1882C20.5069%2017.8687%2020.6667%2017.4729%2020.6667%2017.0007V15.334C20.6667%2014.8618%2020.5069%2014.4659%2020.1875%2014.1465C19.868%2013.827%2019.4722%2013.6673%2019%2013.6673H16.5V11.1673C16.5%2010.6951%2016.3403%2010.2993%2016.0208%209.97982C15.7014%209.66037%2015.3055%209.50065%2014.8333%209.50065H13.1667C12.6944%209.50065%2012.2986%209.66037%2011.9792%209.97982C11.6597%2010.2993%2011.5%2010.6951%2011.5%2011.1673V13.6673H8.99999C8.52777%2013.6673%208.13193%2013.827%207.81249%2014.1465C7.49305%2014.4659%207.33332%2014.8618%207.33332%2015.334V17.0007C7.33332%2017.4729%207.49305%2017.8687%207.81249%2018.1882C8.13193%2018.5076%208.52777%2018.6673%208.99999%2018.6673H11.5ZM14%2033.5007C13.8055%2033.5007%2013.625%2033.4868%2013.4583%2033.459C13.2917%2033.4312%2013.125%2033.3895%2012.9583%2033.334C9.20832%2032.084%206.22221%2029.7715%203.99999%2026.3965C1.77777%2023.0215%200.666656%2019.3895%200.666656%2015.5007V7.62565C0.666656%206.93121%200.868045%206.30621%201.27082%205.75065C1.6736%205.1951%202.19443%204.79232%202.83332%204.54232L12.8333%200.792318C13.2222%200.653429%2013.6111%200.583984%2014%200.583984C14.3889%200.583984%2014.7778%200.653429%2015.1667%200.792318L25.1667%204.54232C25.8055%204.79232%2026.3264%205.1951%2026.7292%205.75065C27.1319%206.30621%2027.3333%206.93121%2027.3333%207.62565V15.5007C27.3333%2019.3895%2026.2222%2023.0215%2024%2026.3965C21.7778%2029.7715%2018.7917%2032.084%2015.0417%2033.334C14.875%2033.3895%2014.7083%2033.4312%2014.5417%2033.459C14.375%2033.4868%2014.1944%2033.5007%2014%2033.5007ZM14%2030.1673C16.8889%2029.2507%2019.2778%2027.4173%2021.1667%2024.6673C23.0555%2021.9173%2024%2018.8618%2024%2015.5007V7.62565L14%203.87565L3.99999%207.62565V15.5007C3.99999%2018.8618%204.94443%2021.9173%206.83332%2024.6673C8.72221%2027.4173%2011.1111%2029.2507%2014%2030.1673Z%22%20fill%3D%22%2327277C%22/%3E%3C/svg%3E");
+}
+
+.fa-bank:before, .fa-institution:before, .fa-university:before{
+	content: url("data:image/svg+xml,%3Csvg%20width%3D%2234%22%20height%3D%2233%22%20viewBox%3D%220%200%2034%2033%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5.33333%2024.6673V16.334C5.33333%2015.8618%205.49305%2015.4659%205.8125%2015.1465C6.13194%2014.827%206.52777%2014.6673%207%2014.6673C7.47222%2014.6673%207.86805%2014.827%208.1875%2015.1465C8.50694%2015.4659%208.66666%2015.8618%208.66666%2016.334V24.6673C8.66666%2025.1395%208.50694%2025.5354%208.1875%2025.8548C7.86805%2026.1743%207.47222%2026.334%207%2026.334C6.52777%2026.334%206.13194%2026.1743%205.8125%2025.8548C5.49305%2025.5354%205.33333%2025.1395%205.33333%2024.6673ZM15.3333%2024.6673V16.334C15.3333%2015.8618%2015.4931%2015.4659%2015.8125%2015.1465C16.1319%2014.827%2016.5278%2014.6673%2017%2014.6673C17.4722%2014.6673%2017.8681%2014.827%2018.1875%2015.1465C18.5069%2015.4659%2018.6667%2015.8618%2018.6667%2016.334V24.6673C18.6667%2025.1395%2018.5069%2025.5354%2018.1875%2025.8548C17.8681%2026.1743%2017.4722%2026.334%2017%2026.334C16.5278%2026.334%2016.1319%2026.1743%2015.8125%2025.8548C15.4931%2025.5354%2015.3333%2025.1395%2015.3333%2024.6673ZM1.99999%2033.0007C1.52777%2033.0007%201.13194%2032.8409%200.812495%2032.5215C0.49305%2032.202%200.333328%2031.8062%200.333328%2031.334C0.333328%2030.8618%200.49305%2030.4659%200.812495%2030.1465C1.13194%2029.827%201.52777%2029.6673%201.99999%2029.6673H32C32.4722%2029.6673%2032.8681%2029.827%2033.1875%2030.1465C33.5069%2030.4659%2033.6667%2030.8618%2033.6667%2031.334C33.6667%2031.8062%2033.5069%2032.202%2033.1875%2032.5215C32.8681%2032.8409%2032.4722%2033.0007%2032%2033.0007H1.99999ZM25.3333%2024.6673V16.334C25.3333%2015.8618%2025.4931%2015.4659%2025.8125%2015.1465C26.1319%2014.827%2026.5278%2014.6673%2027%2014.6673C27.4722%2014.6673%2027.8681%2014.827%2028.1875%2015.1465C28.5069%2015.4659%2028.6667%2015.8618%2028.6667%2016.334V24.6673C28.6667%2025.1395%2028.5069%2025.5354%2028.1875%2025.8548C27.8681%2026.1743%2027.4722%2026.334%2027%2026.334C26.5278%2026.334%2026.1319%2026.1743%2025.8125%2025.8548C25.4931%2025.5354%2025.3333%2025.1395%2025.3333%2024.6673ZM32%2011.334H1.83333C1.41666%2011.334%201.06249%2011.1882%200.770828%2010.8965C0.479162%2010.6048%200.333328%2010.2507%200.333328%209.83398V8.91732C0.333328%208.61176%200.409717%208.34787%200.562495%208.12565C0.715273%207.90343%200.916662%207.72287%201.16666%207.58398L15.5%200.417318C15.9722%200.195095%2016.4722%200.0839844%2017%200.0839844C17.5278%200.0839844%2018.0278%200.195095%2018.5%200.417318L32.75%207.54232C33.0556%207.68121%2033.2847%207.88954%2033.4375%208.16732C33.5903%208.4451%2033.6667%208.73676%2033.6667%209.04232V9.66732C33.6667%2010.1395%2033.5069%2010.5354%2033.1875%2010.8548C32.8681%2011.1743%2032.4722%2011.334%2032%2011.334ZM7.75%208.00065H26.25L17%203.41732L7.75%208.00065Z%22%20fill%3D%22%2327277C%22/%3E%3C/svg%3E");
+}
+
+
+
+
+.offices{
+	@include responsive-padding;
+	.row{@include responsive-padding;}
+	.section-header{margin:0;}
+	.flex-container{
+		padding: 0px;
+
+			display: grid;
+			gap: 10px;
+			grid-template-columns: 1fr;
+
+			@include tablet {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+
+			@include desktop {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		
+	}
+	.icon-row-item{
+		background: $light-blue;
+		.text{
+			h4{color: $primary-blue;}
+			p{color: $dark-gray;}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+//// THIS IS THE RICH TEXT AND BUTTON 
+
+.view-more-bar{
+	padding-bottom: 0px !important;
+	.row{
+		@include responsive-padding;
+		padding-bottom: 0px !important;
+		.col-12{
+			display: flex;
+			align-items: center;
+    	justify-content: space-between;
+
+    	.component-button .button.btn-black{
+				@include button($primary-blue, $primary-blue, outline);
+				
+				span{ padding:0px;}
+
+				min-height: 0px !important;
+    		height: auto;
+			}
+		}
+	}
+
+	&.bg-light, &.bg-navy-blue{
+		padding-bottom: 0px !important;
+		.row{padding:0px;}
+	}
+
+	&.extra-padding{
+		.row{@include responsive-padding;}
+	}
+}
+
+.col-12 .component-feature.-alignment-side-by-side .box { margin-left: 0px; }
+
+
+
+
+
+
+
+.view-posts{
+	&.extra-padding {.row{@include responsive-padding;}}
+	.row .col-12{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"header"
+		"features"
+		"button";
+		gap: 20px;
+
+		@include tablet {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"header button"
+				"features features";
+				gap: 30px;
+		}
+
+		.component-class-richtext{
+			grid-area: header;
+		}
+
+		.component-class-button{
+			grid-area: button;
+			display: flex;
+    	align-items: center;
+    	justify-content: flex-start;
+
+    	@include tablet {
+    		justify-content: flex-end;
+    	}
+
+			a.button{
+				margin-top:0px;
+			}
+		}
+
+		.component-class-featuredynamic{
+			grid-area: features;
+		}
+	}
+}
+
+
+
+
+
+
+div.two-videos{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+	margin-top: 20px;
+
+	@include tablet {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+.page-main .israel-stats{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"one"
+	"two"
+	"three"
+	"four";
+
+	gap: 10px;
+	margin-top: 40px;
+
+	div{
+		h2{
+			text-align: center;
+			@include h2($medium-blue);
+		}
+
+		h6{
+			text-align: center;
+			@include h6($light);
+			font-weight: 500;
+		}
+
+		h5{
+			text-align: center;
+			@include h5($light);
+
+			width: 90%;
+      margin: 0 auto;
+
+			span{
+				@include h5($medium-blue);
+			}
+		}
+	}
+	
+
+	div:nth-child(1){
+		grid-area: one;
+	}
+
+	div:nth-child(2){
+		grid-area: two;
+	}
+
+	div:nth-child(3){
+		grid-area: three;
+	}
+
+	div:nth-child(4){
+		grid-area: four;
+	}
+
+	div{
+		background: $navy-blue;
+		border-radius: 24px;
+		padding: 25px;
+	}
+
+	@include tablet {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 
+			"one two three"
+			"four four four";
+	}
+
+	@include desktop {
+		gap: 20px;
+	}
+}
+
+
+
+
+////// CONTACT US FORM
+
+.jotform-form{
+	ul {
+		list-style:none;
+	}
+
+	input{
+
+	}
+
+	.form-line{
+		margin-top: 20px;
+		@include tablet {
+			margin-top: 30px;
+		}
+		@include desktop {
+			margin-top: 50px;
+		}
+	}
+
+	#cid_3 > div{
+		display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include tablet{
+			grid-template-columns: 1fr 1fr;
+    }
+	}
+			span.form-required{
+				color: $red;
+			}
+
+			label{
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+			}
+
+
+			input, textarea{
+				padding: 9px 16px;
+				border-radius: 10px;
+				border: 2px solid $gray;
+				background: $white;
+				font-size: 18px;
+				font-family: $outfit;
+				font-weight: 600;
+				color: $dark-gray;
+				width: 100% !important;
+				max-width: 100%;
+    			box-sizing: border-box;
+    			margin-top: 10px;
+
+    // 		max-width: none;
+
+				// @include desktop{
+				// 	min-width: 280px;
+				// 	max-width: 280px;
+				// }
+			}
+
+	button{
+		@include button($primary-blue, $light, solid);
+	}
+}
+
+
+//// Specifically put in for the CRISIS page
+.form-sub-label-container{
+	width:100%;
+}	
+
+
+.bg-light.inspo{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+
+
+.tabbed-search .search-header .criteria-bar .sort-filter>li.hover, .tabbed-search .search-header .criteria-bar .sort-filter>li:hover, .tabbed-search .search-header .criteria-bar .dropdown .options ul>li:hover{
+	background-color: $white !important;
+}
+
+.tabbed-search .search-header .criteria-bar .dropdown .options {
+	background-color: $white !important;
+	width: 200px;
+	left:0;
+
+	ul{
+		display: flex;
+    flex-direction: column;
+	}
+}
+
+.search-header{
+
+	.criteria-bar{
+		@include responsive-padding;
+		background: $light-gray !important;
+		margin-bottom: 40px;
+		ul.sort-filter{
+			background: transparent;
+			color: $dark-gray;
+
+			display: flex;
+
+			li {
+				float: left;
+				span{
+					@include caption($dark-gray);
+					color: $dark-gray !important;
+				}
+			}
+		}
+
+		.shell .row{
+			display: flex !important;
+			justify-content: center;
+
+			flex-direction: column;
+
+			@include tablet{
+				flex-direction: row;
+			}
+		}
+
+		.col-4{
+			margin-left: 30px;
+			    width: 100px;
+		}
+
+		.col-8{
+			display: flex !important;
+			flex-direction: column;
+		}
+
+		.field{
+			border-radius: 24px;
+			width: 100%;
+			@include p($gray);
+			border: 1px solid $gray;
+		}
+
+		ul.keywords{
+			li{
+				border-radius: 20px !important;
+				// background: $navy-blue !important;
+				color: $light;
+			}
+		}
+	}
+}
+
+.tabbed-search .context-bar{
+	background-color: transparent !important;
+
+	ul{
+		display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+		li{
+			border-right: 0px solid $gray;
+			border: 1px solid $gray;
+			border-radius: 24px;
+			transition: .3s;
+
+			&:hover{
+				background: $light-gray;
+				transition: .3s;
+			}
+
+			&.search-context.current{
+				background: $light-gray;
+			}
+		}
+	}
+}
+
+.entry.search-entry img{
+	max-width: 200px;
+	border-radius: 24px;
+	padding-right: 0px;
+	margin-right: 20px;
+}
+
+.results-container{
+
+	.row.directory{
+		.entry{
+
+				background: transparent !important;
+
+				@include responsive-padding;
+					
+					 a.title{
+						@include h5($navy-blue);
+
+						&:hover{
+							@include h5($medium-blue);
+							text-decoration: none;
+						}
+					}
+
+					.meta{
+						padding-left: 0px;
+				
+
+						p .date{
+							@include p-bold($dark-gray);
+							padding-left: 0px;
+							background: none !important;
+						}
+					}
+
+		
+		}
+	}
+}
+
+
+
+.error-page {
+	h2{
+		@include h2($primary-blue);
+	}
+
+	p{
+		@include p($navy-blue);
+	}
+
+}
+
+
+.gettinggrounded{
+
+	h6{
+		margin-bottom: 20px;
+
+		@include tablet{
+			margin-bottom: 10px;
+		}
+	}
+
+	h6 b{
+    border: 1px solid #1E3EAF;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+
+		display: block;
+		    margin-left: 0px;
+		    margin-right: 12px;
+		    margin-bottom: 5px;
+
+		        float: left;
+
+    @include tablet{
+    	display: inline-block;
+    	margin-right: 8px !important;
+    	margin-bottom: 0px;
+    	float: none;
+    }
+	}
+
+	.form-footer{
+	  display: flex;
+	  justify-content: space-between;
+	}
+	.sc-cSHVUG{
+		margin-bottom: 20px;
+	}
+
+	.jotform-form label{
+		font-family: "Outfit", sans-serif;
+	}
+
+	.check{
+		display: flex;
+		align-items: flex-end;
+	   gap: 10px;
+	}
+
+	.jotform-form .check input{
+		width:20px !important;
+		height: 20px;
+	}
+
+	.form-footer p a{ 
+		color: #2A2A2A; 
+		@include caption($dark-gray);
+	}
+}
+
+
+
+
+
+
+
+

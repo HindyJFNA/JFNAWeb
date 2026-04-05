@@ -1,0 +1,1 @@
+document.querySelectorAll(".entry").forEach((e=>{const t=e.querySelector("h2 a"),r=document.createElement("a"),n=e.querySelector(".col-5"),o=document.createElement("p");t.parentNode.insertBefore(o,t),o.appendChild(r),r.href=t.href,r.textContent="Read more",o.classList.add("arrow-btn"),n.appendChild(o)}));

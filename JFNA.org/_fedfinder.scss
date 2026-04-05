@@ -1,0 +1,414 @@
+
+            /* Base styles - scoped to FedFinder */
+            #fed-finder-wrap {
+                --primary-color: #1c88ed;
+                --secondary-color: #1E3EAF;
+                --border-color: #c9c9c9;
+                --light-bg: #F5F5F5;
+                --text-color: #555;
+                --light-text: #868686;
+                display: flex;
+
+                /* Sidebar styles */
+                #finder-sidebar {
+                    // width: 38rem; /* ~608px equivalent */
+                    box-sizing: border-box;
+                    padding: 1.875rem 1.25rem; /* 30px 20px */
+                    background: var(--light-bg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 1.5625rem; /* 25px */
+                    overflow-y: auto;
+                    height: 40rem; /* 800px */
+
+                    h3, h4 {
+                        text-align: left;
+                    }
+
+                    h3 {
+                        color: var(--primary-color);
+                        margin-bottom: 1.25rem; /* 20px */
+                        font-size: 2.8125rem; /* 45px */
+                        line-height: 3.66rem; /* 58.5px */
+                    }
+
+                    h5 {
+                        font-size: 1.5rem; /* 24px */
+                        line-height: 2rem; /* 32px */
+                    }
+
+                    @media (min-width: 1024px) {
+                        padding: 2.5rem 3.75rem; /* 40px 60px */
+                        height: 50rem; /* 800px */
+                    }
+                }
+
+                /* Search form styles */
+                .fedfinder-search-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem; /* 20px */
+
+                    input#fedfinder-search {
+                        padding: 0.75rem 1rem 0.75rem 2.7rem !important; /* 12px 16px 12px 43px */
+                        border-radius: 1.5625rem; /* 25px */
+                        position: relative;
+                        border: 2px solid var(--border-color);
+                        font-family: "Outfit", sans-serif;
+                        font-weight: 500;
+                        font-size: 1.25rem; /* 20px */
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+
+                    label {
+                        font-family: "Outfit", sans-serif;
+                        font-weight: 600;
+                        font-size: 1rem; /* 16px */
+                        line-height: 1.5;
+                    }
+                }
+
+                /* Search results styles */
+                .finder-message {
+                    margin: auto 0;
+
+                    &.loading h3,
+                    &.loading h5 {
+                        text-align: center;
+                    }
+                }
+
+                .finder-results {
+                    list-style: none;
+                    margin: 1rem 0 0 0;
+                    padding: 0;
+
+                    .result {
+                        padding: 0 0 1.875rem 0; /* 0 0 30px 0 */
+                        margin-bottom: 1.875rem; /* 30px */
+                        border-bottom: 1px solid var(--border-color);
+
+                        &:last-child,
+                        &:only-of-type {
+                            border-bottom: none;
+                        }
+                    }
+
+                    h5 {
+                        margin-bottom: 0.625rem; /* 10px */
+                    }
+
+                    p {
+                        font-weight: 500;
+                    }
+
+                    /* Proximity note for search results */
+                    .proximity-note {
+                        background-color: #f8f9fa;
+                        border-left: 4px solid var(--secondary-color);
+                        padding: 0.625rem 0.9375rem; /* 10px 15px */
+                        margin-bottom: 1.25rem; /* 20px */
+                        font-size: 0.875rem; /* 14px */
+                        color: var(--text-color);
+                    }
+
+                    .fed-card {
+                        margin-top: 0.625rem; /* 10px */
+                        display: grid;
+                        grid-gap: 0.625rem; /* 10px */
+
+                        ul {
+                            list-style: none;
+                            display: grid;
+                            align-items: center;
+                            grid-template-columns: 1fr 3fr;
+
+                            li:first-child p {
+                                color: var(--light-text);
+                            }
+                        }
+                    }
+
+                    a.button {
+                        height: auto;
+                        font-size: 0.875rem; /* 14px */
+                        padding: 0.625rem 1.25rem; /* 10px 20px */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.625rem; /* 10px */
+                    }
+                }
+
+                /* Map container */
+                #finder-map {
+                    flex: 1;
+                    width: 100%;
+                }
+
+                /* Search UI */
+                .search-wrap {
+                    position: relative;
+
+                    .search-icon {
+                        position: absolute;
+                        left: 0.9375rem; /* 15px */
+                        top: 50%;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                    }
+                }
+
+                /* Loading spinner */
+                .loading-spinner {
+                    display: flex;
+                    justify-content: center;
+                    margin: 1.25rem 0; /* 20px 0 */
+
+                    .spinner {
+                        width: 3.125rem; /* 50px */
+                        height: 3.125rem; /* 50px */
+                        border: 0.3125rem solid rgba(0, 0, 0, 0.1); /* 5px */
+                        border-radius: 50%;
+                        border-top-color: var(--primary-color);
+                        animation: spin 1s ease-in-out infinite;
+                    }
+                }
+
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                /* Download button */
+                .button-download::after {
+                    position: relative;
+                    content: url(data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M8%2011.575C7.86667%2011.575%207.74167%2011.5542%207.625%2011.5125C7.50833%2011.4708%207.4%2011.4%207.3%2011.3L3.7%207.7C3.5%207.5%203.40417%207.26667%203.4125%207C3.42083%206.73333%203.51667%206.5%203.7%206.3C3.9%206.1%204.1375%205.99583%204.4125%205.9875C4.6875%205.97917%204.925%206.075%205.125%206.275L7%208.15V1C7%200.716667%207.09583%200.479167%207.2875%200.2875C7.47917%200.0958333%207.71667%200%208%200C8.28333%200%208.52083%200.0958333%208.7125%200.2875C8.90417%200.479167%209%200.716667%209%201V8.15L10.875%206.275C11.075%206.075%2011.3125%205.97917%2011.5875%205.9875C11.8625%205.99583%2012.1%206.1%2012.3%206.3C12.4833%206.5%2012.5792%206.73333%2012.5875%207C12.5958%207.26667%2012.5%207.5%2012.3%207.7L8.7%2011.3C8.6%2011.4%208.49167%2011.4708%208.375%2011.5125C8.25833%2011.5542%208.13333%2011.575%208%2011.575ZM2%2016C1.45%2016%200.979167%2015.8042%200.5875%2015.4125C0.195833%2015.0208%200%2014.55%200%2014V12C0%2011.7167%200.0958333%2011.4792%200.2875%2011.2875C0.479167%2011.0958%200.716667%2011%201%2011C1.28333%2011%201.52083%2011.0958%201.7125%2011.2875C1.90417%2011.4792%202%2011.7167%202%2012V14H14V12C14%2011.7167%2014.0958%2011.4792%2014.2875%2011.2875C14.4792%2011.0958%2014.7167%2011%2015%2011C15.2833%2011%2015.5208%2011.0958%2015.7125%2011.2875C15.9042%2011.4792%2016%2011.7167%2016%2012V14C16%2014.55%2015.8042%2015.0208%2015.4125%2015.4125C15.0208%2015.8042%2014.55%2016%2014%2016H2Z%22%20fill%3D%22%231E3EAF%22/%3E%3C/svg%3E);
+                    height: 2.5rem; /* 40px */
+                    width: 2.5rem; /* 40px */
+                    left: 0.75rem; /* 12px */
+                }
+
+            }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#fed-finder-wrap{
+	display:grid;
+
+	@include tablet{
+		display:flex;
+	}
+}
+
+div#finder-sidebar{
+	
+	@include responsive-padding;
+	background: $light;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:25px;
+
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 800px;
+    order: 1;
+
+    @include tablet {
+    	order: 0;
+    	max-width: 50%;
+    }
+
+    @include desktop {
+    	max-width: 608px !important;
+    }
+
+    h3, h4{
+    	text-align:left;
+    }
+
+    h3{
+    	color: $medium-blue;
+    }
+
+    .fedfinder-search-form{
+    	display:flex;
+    	flex-direction:column;
+    	gap:20px;
+
+    	input{
+    		padding: 12px 16px;
+    		border-radius: 25px;
+    		position: relative;
+    		border: 2px solid $gray;
+    		font-family: $outfit;
+    		font-weight: 500;
+			font-size: 20px;
+
+    		&::before{
+				position: relative;
+				content: url('data:image/svg+xml;utf8,<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.05001 10.9504L1.57501 8.32539C1.35835 8.24206 1.20001 8.11289 1.10001 7.93789C1.00001 7.76289 0.950012 7.58372 0.950012 7.40039C0.950012 7.21706 1.00418 7.03789 1.11251 6.86289C1.22085 6.68789 1.38335 6.55872 1.60001 6.47539L16.95 0.775391C17.15 0.692057 17.3417 0.675391 17.525 0.725391C17.7083 0.775391 17.8667 0.867057 18 1.00039C18.1333 1.13372 18.225 1.29206 18.275 1.47539C18.325 1.65872 18.3083 1.85039 18.225 2.05039L12.525 17.4004C12.4417 17.6171 12.3125 17.7796 12.1375 17.8879C11.9625 17.9962 11.7833 18.0504 11.6 18.0504C11.4167 18.0504 11.2375 18.0004 11.0625 17.9004C10.8875 17.8004 10.7583 17.6421 10.675 17.4254L8.05001 10.9504ZM11.55 14.3004L15.6 3.40039L4.70001 7.45039L9.60001 9.40039L11.55 14.3004Z" fill="black"/></svg>');
+				height: 40px;
+				width: 40px;
+				left: 12px;
+			}
+    	}
+
+    	label{
+    		font-family: $outfit;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			letter-spacing: 0%;
+    	}
+    }
+
+    .finder-message{
+    	margin-top: auto;
+		margin-bottom: auto;
+    }
+
+    ul.finder-results{
+    	// border-bottom: 1px solid $gray;
+		list-style: none;
+    	
+    	> li{
+			padding: 0px 0 30px 0px;
+    		margin-bottom: 20px;
+    		border-bottom: 1px solid $gray;
+
+    		&:last-child{
+    			border-bottom: 0px solid $gray;
+    		}
+
+    		&:only-of-type{
+    			border-bottom: 0px solid $gray;
+    		}
+
+    		p{font-weight: 500;}
+
+    		div.fed-card{
+    			ul{
+    				list-style: none;
+    				display: grid;
+    				grid-template-columns: 1fr 3fr;
+    				li:first-child{
+    					color: $medium-gray;
+    				}
+
+    				li a{
+    					@include p-bold($primary-blue);
+
+    					&:hover{
+    						color:$medium-blue;
+    					}
+    				}
+    			}
+    		}
+
+
+    	}
+
+    	.proximity-note{
+    		border-left:0px solid $light-gray !important;
+    		border-radius: 10px;
+    		padding: 10px 15px  !important;
+    		@include caption($dark-gray);
+    		background-color: $light-gray  !important;
+
+    	}
+    }
+
+}
+
+div#finder-map{
+	flex: 1;
+    width: 100%;
+
+    height: 400px;
+	width: 100%;
+
+	@include tablet{
+		height: auto;
+	}
+}
+
+
+
+
+
+
+///// fedfinder page form
+
+div.ff-form{
+	form{
+			
+			div.inputs{
+				display: flex;
+				gap: 20px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				flex-direction: column;
+
+				@include desktop {
+					flex-direction: row;
+					margin-top: 40px;
+					margin-bottom: 40px;
+				}
+			}
+
+			.input-group{
+				display: grid;
+				gap: 10px;
+			}
+
+			label{
+				@include label($light);
+			}
+
+			input{
+				padding: 9px 16px;
+				border-radius: 10px;
+				border: 2px solid $gray;
+				background: $light-gray;
+				font-size: 18px;
+				font-family: $outfit;
+				font-weight: 600;
+				color: $dark-gray;
+				width: 100%;
+				max-width: 100%;
+    			box-sizing: border-box;
+
+				@include desktop{
+
+				}
+			}
+
+			button{
+				@include button($light-blue, $primary-blue);
+			}
+		}
+	}
+
+
+
+
+
+
+

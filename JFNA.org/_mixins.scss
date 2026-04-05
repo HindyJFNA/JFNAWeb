@@ -1,0 +1,384 @@
+
+//// BREAKPOINTS ARE MOBILE FIRST!!!
+$small-tablet: 667px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop: 1300px;
+$xlarge: 1500px; 
+
+
+@mixin mobile {
+  @media (min-width: #{$small-tablet}){
+    @content;
+  }
+}
+ 
+@mixin tablet {
+  @media (min-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin largedesktop {
+  @media (min-width: #{$large-desktop}) {
+    @content;
+  }
+}
+
+@mixin xlargedesktop {
+  @media (min-width: #{$xlarge}) {
+    @content;
+  }
+}
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+
+$sidepad-mob: 20px;
+$sidepad-desk: 60px;
+
+$toppad-mob: 30px;
+$toppad-desk: 50px;
+
+@mixin responsive-padding{
+  box-sizing: border-box;
+  padding: 30px 20px;
+ 
+  @include tablet {
+    padding: 30px 20px;
+  }
+
+  @include desktop {
+    padding: 50px 60px;
+  }
+
+  @include largedesktop {
+     // padding: 50px 60px;
+    padding: 60px 80px;
+  }
+  @include xlargedesktop {
+     // padding: 50px 60px;
+    padding: 60px 10%;
+  }
+}
+
+
+//// BRAND COLORS 
+
+$primary-blue: #1E3EAF; 
+$navy-blue: #27277C;
+$medium-blue: #1c88ed;
+$light-blue: #D2E9FF;
+$pale-blue: #F1F8FF;
+$text: #2A2A2A; // SAME AS DARK-GRAY
+
+$light: #F5F5F5; 
+$white: #FDFDFD; // surface 1
+
+$dark-gray: #2A2A2A;
+$gray: #c9c9c9;
+$medium-gray: #8F8F8F; // was d4d4d4
+$light-gray: #ECECEC; // surface 4
+
+
+$purple: #E9ECF7;
+$red: #AC1E15;
+
+
+//// FONT
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+$sans: 'Outfit', sans-serif;
+$outfit: 'Outfit', sans-serif;
+$hebrew: "Noto Sans Hebrew", sans-serif;
+
+
+
+@mixin gray-card-text{
+  .rich-text{
+    h1{@include h1($primary-blue);}
+    h2{@include h2($primary-blue);}
+    h3{@include h3($primary-blue);}
+    h4{@include h4($primary-blue);}
+    h5{@include h5($navy-blue);}
+    h6{@include h6($navy-blue);}
+    p{@include p($dark-gray);}
+    p.eyebrow{@include p-semi($primary-blue);}
+  }
+}
+
+@mixin white-card-text{
+  .rich-text{
+    h1{@include h1($primary-blue);}
+    h2{@include h2($primary-blue);}
+    h3{@include h3($primary-blue);}
+    h4{@include h4($primary-blue);}
+    h5{@include h5($navy-blue);}
+    h6{@include h6($navy-blue);}
+    p{@include p($dark-gray);}
+    p.eyebrow{@include p-semi($primary-blue);}
+  }
+}
+
+@mixin blue-card-text{
+  .rich-text{
+    h1{@include h1($light);}
+    h2{@include h2($light);}
+    h3{@include h3($light);}
+    h4{@include h4($light);}
+    h5{@include h5($light);}
+    h6{@include h6($light);}
+    p{@include p($light);}
+    p.eyebrow{@include p-semi($light);}
+  }
+}
+
+
+
+@mixin bg-color($color){
+  @include responsive-padding;
+  background-color: $color;
+
+  @if $color == $primary-blue {
+    // .component-class-richtext .rich-text h4{color: $light;}
+      .rich-text{
+        h1{@include h1($light);}
+        h2{@include h2($light);}
+        h3{@include h3($light-blue);}
+        h4{@include h4($light);}
+        h5{@include h5($light);}
+        h6{@include h6($light);}
+        p{@include p($light);}
+        p.large{@include p-large($light);}
+      }
+
+      &.white-card{
+        @include white-card-text();
+      }
+
+      &.gray-card {
+        @include gray-card-text();
+      }
+
+      &.lightblue-card{
+        @include white-card-text();
+      }
+  }
+
+  @else if $color == $navy-blue {
+    // .component-class-richtext .rich-text h4{color: $light;}
+    .rich-text{
+      h1{@include h1($light);}
+      h2{@include h2($light);}
+      h3{@include h3($light-blue);}
+      h4{@include h4($light);}
+      h5{@include h5($light);}
+      h6{@include h6($light);}
+      p{@include p($light);}
+      p.large{@include p-large($light);}
+
+    }
+
+    &.white-card{
+      @include white-card-text();
+    }
+
+    &.gray-card {
+      @include gray-card-text();
+    }
+
+    &.lightblue-card{
+        @include white-card-text();
+      }
+  }
+
+  @else if $color == $medium-blue {
+    // .component-class-richtext .rich-text h4{color: $light;}
+
+    .rich-text{
+      h1{@include h1($light);}
+      h2{@include h2($light);}
+      h3{@include h3($light-blue);}
+      h4{@include h4($light);}
+      h5{@include h5($light);}
+      h6{@include h6($light);}
+      p{@include p($light);}
+      p.large{@include p-large($light);}
+    }
+
+    &.white-card{
+      @include white-card-text();
+    }
+
+    &.gray-card {
+      @include gray-card-text();
+    }
+
+    &.lightblue-card{
+        @include white-card-text();
+      }
+  }
+
+  @else if $color == $light-blue {
+    // .component-class-richtext .rich-text h4{color: $primary-blue;}
+    .rich-text{
+      h1{@include h1($primary-blue);}
+      h2{@include h2($primary-blue);}
+      h3{@include h3($primary-blue);}
+      h4{@include h4($primary-blue);}
+      h5{@include h5($navy-blue);}
+      h6{@include h6($dark-gray);}
+      p{@include p($dark-gray);}
+      p.large{@include p-large($dark-gray);}
+    }
+  } 
+
+  @else if $color == $pale-blue {
+    .rich-text{
+      h1{@include h1($primary-blue);}
+      h2{@include h2($primary-blue);}
+      h3{@include h3($navy-blue);}
+      h4{@include h4($primary-blue);}
+      h5{@include h5($navy-blue);}
+      h6{@include h6($dark-gray);}
+      p{@include p($dark-gray);}
+      p.large{@include p-large($dark-gray);}
+
+    }
+  } 
+
+  @else {
+    .rich-text{
+      h1{@include h1($primary-blue);}
+      h2{@include h2($primary-blue);}
+      h3{@include h3($primary-blue);}
+      h4{@include h4($primary-blue);}
+      h5{@include h5($navy-blue);}
+      h6{@include h6($navy-blue);}
+      p{@include p($dark-gray);}
+      p.large{@include p-large($dark-gray);}
+      p.eyebrow{@include p-semi($primary-blue);}
+    }
+  } 
+}
+
+
+
+
+
+
+/// GRADIENT   - this gets added in the before/after of an object
+
+@mixin gradient(){
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  background: linear-gradient(180deg, rgba(9, 14, 32, 0.00) 17.76%, rgba(9, 14, 32, 0.18) 34.21%, rgba(9, 14, 32, 0.60) 54.77%, rgba(9, 14, 32, 0.80) 100%);
+  pointer-events: none; // Ensures overlay doesn't interfere with interactions
+}
+
+@mixin gradient-hover(){
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  background: linear-gradient(180deg, rgba(9, 14, 32, 0.01) 17.76%, rgba(9, 14, 32, 0.25) 34.21%, rgba(9, 14, 32, 0.6) 54.77%, rgba(9, 14, 32, 0.9) 100%);
+  pointer-events: none; // Ensures overlay doesn't interfere with interactions
+}
+
+
+$shadow:  0px 1.541px 4.141px 0px rgba(0, 0, 0, 0.04), 0px 0.326px 1.059px 0px rgba(0, 0, 0, 0.02);
+$hover-shadow:  0px 0px 15px 9px rgba(0, 0, 0, 0.08), 0px 0.326px 1.059px 0px rgba(0, 0, 0, 0.04);
+
+
+ 
+
+/// CARDS - this gets added into the class for the whole FedWeb row (not the .row object)
+
+@mixin card($color) {
+  @include responsive-padding;
+  margin: 0px;
+
+  .row{
+    box-shadow: 0px 6px 20px 5px #0000000f;
+    position:relative;
+    margin: 0 auto;
+    border-radius:24px;
+    box-sizing: border-box;
+    background: $color;
+    width: auto;
+
+      @include desktop {
+        .rich-text{
+          p.align-center, h4.align-center, h5.align-center, h6.align-center{max-width: 87%;}
+        }
+      }
+
+      @include largedesktop {
+        .rich-text{
+          p.align-center, h4.align-center, h5.align-center, h6.align-center{max-width: 85%;}
+        }
+      }
+
+
+    .rich-text, .component-icon-row{
+      @include responsive-padding;
+    }
+  
+
+    @if $color == $primary-blue {
+      .rich-text *{
+        color: $light;
+      }
+    }
+
+    @if $color == $white {
+      .rich-text *{
+        // color: $primary-blue;
+      }
+    }
+  }
+
+  /// ADD OVERLAP TO BUMP UP OVER IMAGE
+  &.overlap .row{
+    margin-top: -120px;
+  } 
+}
+
+
+
+
+@mixin animation() {
+  opacity: 0;
+  animation-delay: 1s;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
