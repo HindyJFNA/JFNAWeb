@@ -673,3 +673,94 @@ section.career-center-listing{
 
 
 
+
+
+.section-career-center.section-career-center-submit.section-id-4164{
+	.page-wrapper {
+		@include bg-color($light);
+
+	}
+	.page-main.suggest-job{
+		@include bg-color($white);
+
+		background: $white;
+        border-radius: 24px;
+
+		.shell{
+			.row{
+				.col-8{
+					width: 100%;
+
+					.page-title{
+						margin: 0 auto;
+					    text-align: center;
+					    width: 100%;
+					    position: relative;
+
+					    h2{
+					    	margin-bottom: 30px;
+					    }
+					}
+				}
+
+				.col-10{
+					width: 100%;
+
+					.user-input-form{
+						margin: 0 auto;
+
+						label{
+							@include label($text);
+							margin-bottom: 10px;
+						}
+
+						label+.helper{
+							@include caption($medium-gray);
+						}
+
+						.field {
+						    background: #fff;
+						    border: 1px solid $gray;
+						    border-radius: 24px;
+						    color: $text;
+						    display: block;
+						  
+						}
+
+						.chzn-container-single .chzn-single {
+						    background: #fff;
+						    background: none;
+						    border: 1px solid $gray;
+						    border-radius: 24px;
+						    border-top: 1px solid $gray;
+						    box-shadow: none;						    
+						    color: $text;
+						    display: block;
+						    font-weight: 600;
+						    height: 50px;
+						    line-height: 50px;
+						    overflow: hidden;
+						    padding: 0 0 0 15px;
+						    position: relative;
+						    text-decoration: none;
+						    white-space: nowrap;
+						    z-index: 5;
+						}
+
+						.flex-field-container .flex-row .chzn-container{
+							width: 100%;
+						}
+					}
+
+
+					form{
+						.user-input-form .flex-field-container .flex-row .chzn-container{
+							width: 97%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
