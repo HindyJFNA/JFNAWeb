@@ -1,0 +1,50 @@
+<!-- amCharts core and maps -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/canadaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+
+<div id="fed-finder-wrap">
+
+    <div id="finder-sidebar">
+        <div class="fedfinder-search-form">
+            <label for="fedfinder-search">Enter a federation name, city, province/state or zip/postal code:</label>
+            <div class="search-wrap">
+                <input type="search" name="fedfinder-search" id="fedfinder-search" autocomplete="off"
+                       style="user-select: auto; -webkit-user-select: auto;"/>
+                <svg class="search-icon" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.05001 10.9504L1.57501 8.32539C1.35835 8.24206 1.20001 8.11289 1.10001 7.93789C1.00001 7.76289 0.950012 7.58372 0.950012 7.40039C0.950012 7.21706 1.00418 7.03789 1.11251 6.86289C1.22085 6.68789 1.38335 6.55872 1.60001 6.47539L16.95 0.775391C17.15 0.692057 17.3417 0.675391 17.525 0.725391C17.7083 0.775391 17.8667 0.867057 18 1.00039C18.1333 1.13372 18.225 1.29206 18.275 1.47539C18.325 1.65872 18.3083 1.85039 18.225 2.05039L12.525 17.4004C12.4417 17.6171 12.3125 17.7796 12.1375 17.8879C11.9625 17.9962 11.7833 18.0504 11.6 18.0504C11.4167 18.0504 11.2375 18.0004 11.0625 17.9004C10.8875 17.8004 10.7583 17.6421 10.675 17.4254L8.05001 10.9504ZM11.55 14.3004L15.6 3.40039L4.70001 7.45039L9.60001 9.40039L11.55 14.3004Z"
+                        fill="black"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="finder-message welcome">
+            <h3>Make an Impact in Your Community</h3>
+            <h5>Get involved with your local Federation, explore volunteer opportunities, or make a donation.</h5>
+        </div>
+
+        <div class="finder-message no-result" style="display: none;">
+            <h3>No Result Match Your Search</h3>
+            <h5>Please try again or for assistance please contact JFNA's national office at <a
+                    href="mailto:info@jewishfederations.org">info@jewishfederations.org</a> or (212) 284-6500.</h5>
+        </div>
+
+        <div class="finder-message loading" style="display: none;">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <ul class="finder-results" style="display: none;"></ul>
+
+        <p class="download-btn"><a href="http://jewishfederations.org/federation-finder/pdf">Download the Jewish Federation Directory</a></p>
+    </div>
+    <div id="finder-map">
+        <div id="chartdiv" style="width:100%; height:100%;"></div>
+    </div>
+
+</div>

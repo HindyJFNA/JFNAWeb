@@ -1,0 +1,27 @@
+<!-- The Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalBody = document.getElementById("modal-body");
+  const closeBtn = modal.querySelector(".close");
+
+  // When any .modal-trigger is clicked
+  document.querySelectorAll(".enabled .col-3").forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      modalBody.innerHTML = trigger.innerHTML; // copy content
+      modal.style.display = "flex"; // show modal
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>

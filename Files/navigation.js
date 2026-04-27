@@ -1,7 +1,7 @@
 // wait for page to load before executing
 window.addEventListener('load', function () {
 
-  const toggleButton = document.querySelector('.navbar__toggle .hamburger');
+  const toggleButton = document.querySelector('.navbar__toggle .menu-trigger');
   const toggleBar = document.querySelector('.navbar__toggle');
   const toggleBack = document.querySelector('.navbar__toggle .back-button');
   const navMenu = document.querySelector('.nav-menu');
