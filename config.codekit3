@@ -329,6 +329,14 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/Embedded-Code\/section-fix-css.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Embedded-Code\/section-fix-css.html",
+      "oF" : 0
+    },
     "\/events.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -407,17 +415,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/Files\/accordion-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/Files\/accordion-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Files\/accordion.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -448,17 +445,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/Files\/add-readmore-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/Files\/add-readmore-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Files\/add-readmore.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -477,17 +463,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/Files\/blog-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Files\/blog-stream-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/Files\/blog-stream-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -522,6 +497,17 @@
       "oAP" : "\/Files\/career-filters.html",
       "oF" : 0
     },
+    "\/Files\/career-opportunities.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/Files\/career-opportunities-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/Files\/contact-form.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -529,6 +515,44 @@
       "oA" : 0,
       "oAP" : "\/Files\/contact-form.html",
       "oF" : 0
+    },
+    "\/Files\/emergency-bar-html.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Files\/emergency-bar-html.html",
+      "oF" : 0
+    },
+    "\/Files\/emergency-bar.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/Files\/emergency-bar-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Files\/fed-finder.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Files\/fed-finder.html",
+      "oF" : 0
+    },
+    "\/Files\/fed-finder.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/Files\/fed-finder-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/Files\/footer.html" : {
       "cB" : 0,
@@ -604,32 +628,21 @@
       "oAP" : "\/Files\/home.html",
       "oF" : 0
     },
-    "\/Files\/map-sidebar.html" : {
+    "\/Files\/inspo-blocks.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/Files\/map-sidebar.html",
+      "oAP" : "\/Files\/inspo-blocks.html",
       "oF" : 0
     },
-    "\/Files\/map.html" : {
+    "\/Files\/modal.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/Files\/map.html",
+      "oAP" : "\/Files\/modal.html",
       "oF" : 0
-    },
-    "\/Files\/navigation-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/Files\/navigation-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/Files\/navigation.html" : {
       "cB" : 0,
@@ -658,16 +671,40 @@
       "oAP" : "\/Files\/our-history.html",
       "oF" : 0
     },
-    "\/Files\/video-loader-min.js" : {
+    "\/Files\/public-policy-accordions.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Files\/public-policy-accordions.html",
+      "oF" : 0
+    },
+    "\/Files\/public-policy-sticky-nav.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Files\/public-policy-sticky-nav.html",
+      "oF" : 0
+    },
+    "\/Files\/public-policy-sticky-nav.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/Files\/video-loader-min-min.js",
+      "oAP" : "\/Files\/public-policy-sticky-nav-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/Files\/rebuild-israel-impact-accordions.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/Files\/rebuild-israel-impact-accordions.html",
+      "oF" : 0
     },
     "\/Files\/video-loader.js" : {
       "bF" : 0,
@@ -792,14 +829,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/rebuild-israel-impact-accordions.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/rebuild-israel-impact-accordions.html",
-      "oF" : 0
-    },
     "\/rebuild-israel.css" : {
       "aP" : 0,
       "bl" : 0,
@@ -835,7 +864,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 763256835.50929904,
-    "displayValue" : "JFNA.org",
+    "displayValue" : "JFNAWeb",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-ucla",
     "iconImageWasSetByUser" : 0
