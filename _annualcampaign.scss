@@ -39,14 +39,17 @@
 				.text-container{
 					.read-more-link{
 						@include arrow-btn($white);
-						    margin-top: 20px;
-						 &:hover{
-						 	@include arrow-btn($medium-blue);
-						 }
+						margin-top: 20px;
+						
+						&:hover{
+						 	@include arrow-btn($light-blue);
+						}
+
 						a{
 							@include p-bold($white);
 							&:hover{
 								text-decoration: none;
+								@include p-bold($light-blue);
 							}
 						}
 					}
