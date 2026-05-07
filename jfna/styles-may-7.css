@@ -16960,7 +16960,7 @@ div.ff-form form button:active {
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23D2E9FF"/></g></svg>');
   background: #1c88ed;
 }
-.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .read-more-link a a {
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a {
   position: relative;
   display: flex;
   align-items: center;
@@ -16969,7 +16969,7 @@ div.ff-form form button:active {
   transition: 0.3s;
   color: #1E3EAF;
 }
-.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .read-more-link a a::after {
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a::after {
   position: relative;
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%231E3EAF"/></g></svg>');
   height: 40px;
@@ -16983,16 +16983,32 @@ div.ff-form form button:active {
   transition: 0.3s;
   flex: none;
 }
-.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .read-more-link a a:hover::after {
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a:hover::after {
   transition: 0.3s;
   background: #D2E9FF;
 }
-.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .read-more-link a a::after {
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a::after {
   background: #D2E9FF;
 }
-.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .read-more-link a a:hover::after {
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a:hover::after {
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23f5f5f5"/></g></svg>');
   background: #1c88ed;
+}
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0%;
+  color: #FDFDFD;
+}
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a strong, .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a em, .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a b {
+  font-weight: 600;
+  color: #FDFDFD;
+}
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .text-container .read-more-link a.hebrew {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .button-container {
   margin-top: 0px;
@@ -17087,6 +17103,7 @@ div.ff-form form button:active {
   justify-content: center;
   transition: 0.3s;
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23f5f5f5"/></g></svg>');
+  display: none;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box:hover .body:after:hover {
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23D2E9FF"/></g></svg>');

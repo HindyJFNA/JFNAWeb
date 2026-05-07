@@ -36,9 +36,12 @@
 					display: none;
 				}
 
-				.read-more-link{
-					a{
+				.text-container{
+					.read-more-link{
 						@include arrow-btn($light-blue);
+						a{
+							@include p-bold($white);
+						}
 					}
 				}
 
@@ -85,6 +88,8 @@
 				.body{
 					&:after{
 						@include arrow($medium-blue);
+						display: none;
+
 					}
 				}
 			}		
