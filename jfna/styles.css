@@ -17058,3 +17058,133 @@ div.ff-form form button:active {
     gap: 20px !important;
   }
 }
+
+.basic.cards .component-image {
+  max-height: none !important;
+}
+.basic.cards .row {
+  gap: 20px;
+  align-items: stretch;
+}
+.basic.cards .row .rich-text h4 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #1E3EAF;
+}
+@media (min-width: 1024px) {
+  .basic.cards .row .rich-text h4 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+.basic.cards .row .rich-text h4.hebrew {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
+}
+.basic.cards .row .rich-text h5 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #27277C;
+}
+@media (min-width: 1024px) {
+  .basic.cards .row .rich-text h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.basic.cards .row .rich-text h5.hebrew {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
+}
+.basic.cards .row .rich-text ul li a {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #2A2A2A;
+}
+@media (min-width: 1024px) {
+  .basic.cards .row .rich-text ul li a {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+.basic.cards .row .rich-text ul li a strong, .basic.cards .row .rich-text ul li a em, .basic.cards .row .rich-text ul li a b {
+  font-weight: 600;
+  color: #2A2A2A;
+}
+.basic.cards .row .rich-text ul li a.hebrew {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
+}
+@media (min-width: 1024px) {
+  .basic.cards .row {
+    gap: 40px;
+  }
+}
+.basic.cards .col-8 {
+  background: #FDFDFD;
+  border-radius: 24px;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  flex: 4;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .basic.cards .col-8 {
+    padding: 30px 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .basic.cards .col-8 {
+    padding: 50px 60px;
+  }
+}
+@media (min-width: 1300px) {
+  .basic.cards .col-8 {
+    padding: 60px 80px;
+  }
+}
+@media (min-width: 1500px) {
+  .basic.cards .col-8 {
+    padding: 60px 10%;
+  }
+}
+.basic.cards .col-8 .button {
+  float: left;
+  margin-right: 10px;
+}
+.basic.cards.bg-white .col-8 {
+  background: #F5F5F5;
+}
+.basic.cards .col-4 {
+  background: #ECECEC;
+  border-radius: 24px;
+  flex: 4;
+  width: 100%;
+  box-sizing: border-box;
+}
+.basic.cards .col-4 .rich-text {
+  padding: 20px;
+}
+.basic.cards .col-4 .component-class-image, .basic.cards .col-4 .component-class-image * {
+  height: 100%;
+}
+.basic.cards .col-4 img {
+  object-fit: cover;
+  width: 100%;
+}

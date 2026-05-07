@@ -793,18 +793,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/jfna\/sections.css" : {
-      "aP" : 0,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/jfna\/sections-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/jfna\/styles.css" : {
       "aP" : 0,
       "bl" : 0,
@@ -854,20 +842,6 @@
       "oAP" : "\/rebuild-israel-min.css",
       "oF" : 0,
       "pg" : 0
-    },
-    "\/sections.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/jfna\/styles.css",
-      "oF" : 2,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
     }
   },
   "hooks" : [
@@ -2826,7 +2800,7 @@
     },
     "languageDefaultsSASS" : {
       "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*",
+      "autoOutputPathFilenamePattern" : "",
       "autoOutputPathRelativePath" : "\/jfna",
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",

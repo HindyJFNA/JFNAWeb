@@ -94,3 +94,58 @@
 }
 
 
+
+.basic.cards{
+		.component-image{ max-height: none !important; }
+		.row {
+			gap: 20px;
+			align-items: stretch;
+			
+			.rich-text{
+				h4{@include h4($primary-blue);}
+				h5{@include h5($navy-blue);}
+				ul li a{@include p($dark-gray);}
+			}
+
+			@include desktop{
+				gap: 40px;
+			}
+		}
+
+		/// TEXT SIDE
+		.col-8{
+			background: $white;
+			border-radius: 24px;
+			@include responsive-padding;
+			flex: 4;		
+
+			.button{
+				float: left;
+    			margin-right: 10px;
+			}	
+
+			width: 100%;
+   			box-sizing: border-box;
+
+		}
+
+		&.bg-white{
+			.col-8{background: $light;}
+		}
+
+		.col-4{
+			background: $light-gray;
+			border-radius: 24px;
+			flex: 4;
+			.rich-text{padding: 20px;}
+			width: 100%;
+   			box-sizing: border-box;
+
+			.component-class-image, .component-class-image * {height: 100%;}
+
+			img{
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+	}
