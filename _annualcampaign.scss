@@ -36,6 +36,12 @@
 					display: none;
 				}
 
+				.read-more-link{
+					a{
+						@include arrow-btn($light-blue);
+					}
+				}
+
 				.button-container {
 					margin-top:0px;
 					a.button{
