@@ -83,6 +83,14 @@
 
 .shell.basic.cards .row{
 	gap: 20px !important;
+
+	@include tablet{
+		gap: 20px !important;
+	}
+
+	@include desktop{
+		gap: 20px !important;
+	}
 }
 
 

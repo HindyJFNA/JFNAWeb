@@ -17048,3 +17048,13 @@ div.ff-form form button:active {
 .shell.basic.cards .row {
   gap: 20px !important;
 }
+@media (min-width: 768px) {
+  .shell.basic.cards .row {
+    gap: 20px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .shell.basic.cards .row {
+    gap: 20px !important;
+  }
+}
