@@ -199,14 +199,21 @@
 	}
 
 
-.button-arrow{
-	@include button($primary-blue, $primary-blue, outline);
-	max-width: auto;
 
+.align-center.arrow-btn{
 	@include arrow-btn($white);
-
-	// a{
-	// 	@include arrow-btn($white)
-	// }
 }
+
+
+
+// .button-arrow{
+// 	@include button($primary-blue, $primary-blue, outline);
+// 	max-width: auto;
+
+// 	@include arrow-btn($white);
+
+// 	// a{
+// 	// 	@include arrow-btn($white)
+// 	// }
+// }
 

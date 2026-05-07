@@ -17343,55 +17343,7 @@ div.ff-form form button:active {
   }
 }
 
-.button-arrow {
-  padding: 12px 24px;
-  border-radius: 30px;
-  height: auto;
-  font-family: "Outfit", sans-serif;
-  font-weight: 600 !important;
-  font-size: 18px;
-  line-height: 27px;
-  text-align: center;
-  display: inline-block;
-  margin-right: auto;
-  white-space: nowrap;
-  display: flex;
-  width: auto;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background: transparent;
-  color: #1E3EAF !important;
-  border: 3px solid #1E3EAF;
-  max-width: auto;
-}
-.button-arrow span, .button-arrow p {
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  text-align: center;
-  color: #1E3EAF;
-  transition: 0.3s;
-}
-.button-arrow span:hover, .button-arrow p:hover {
-  transition: 0.3s;
-}
-.button-arrow a, .button-arrow span {
-  color: #1E3EAF !important;
-}
-.button-arrow:hover {
-  color: #1c88ed !important;
-  border: 3px solid #1c88ed;
-}
-.button-arrow:hover a, .button-arrow:hover span {
-  color: #1c88ed !important;
-}
-.button-arrow:active {
-  background: #27277C;
-}
-.button-arrow a {
+.align-center.arrow-btn a {
   position: relative;
   display: flex;
   align-items: center;
@@ -17400,7 +17352,7 @@ div.ff-form form button:active {
   transition: 0.3s;
   color: #FDFDFD;
 }
-.button-arrow a::after {
+.align-center.arrow-btn a::after {
   position: relative;
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%231E3EAF"/></g></svg>');
   height: 40px;
@@ -17414,14 +17366,14 @@ div.ff-form form button:active {
   transition: 0.3s;
   flex: none;
 }
-.button-arrow a:hover::after {
+.align-center.arrow-btn a:hover::after {
   transition: 0.3s;
   background: #D2E9FF;
 }
-.button-arrow a::after {
+.align-center.arrow-btn a::after {
   background: #FDFDFD;
 }
-.button-arrow a:hover::after {
+.align-center.arrow-btn a:hover::after {
   background: #1E3EAF;
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23f5f5f5"/></g></svg>');
 }
