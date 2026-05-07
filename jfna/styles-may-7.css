@@ -17059,6 +17059,9 @@ div.ff-form form button:active {
   }
 }
 
+.basic.cards {
+  padding-top: 40px;
+}
 .basic.cards .component-image {
   max-height: none !important;
 }
@@ -17136,7 +17139,7 @@ div.ff-form form button:active {
   }
 }
 .basic.cards .col-8 {
-  background: #FDFDFD;
+  background: #F9F9F9;
   border-radius: 24px;
   box-sizing: border-box;
   padding: 30px 20px;
@@ -17169,7 +17172,7 @@ div.ff-form form button:active {
   margin-right: 10px;
 }
 .basic.cards.bg-white .col-8 {
-  background: #F5F5F5;
+  background: #F9F9F9;
 }
 .basic.cards .col-4 {
   background: #ECECEC;
@@ -17187,4 +17190,15 @@ div.ff-form form button:active {
 .basic.cards .col-4 img {
   object-fit: cover;
   width: 100%;
+}
+.basic.cards.reverse .row {
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .basic.cards.reverse .row {
+    flex-direction: row;
+  }
+  .basic.cards.reverse .row:after {
+    display: none;
+  }
 }

@@ -95,7 +95,8 @@
 
 
 
-.basic.cards{
+	.basic.cards{
+		padding-top: 40px;
 		.component-image{ max-height: none !important; }
 		.row {
 			gap: 20px;
@@ -114,7 +115,7 @@
 
 		/// TEXT SIDE
 		.col-8{
-			background: $white;
+			background: #F9F9F9;
 			border-radius: 24px;
 			@include responsive-padding;
 			flex: 4;		
@@ -130,7 +131,7 @@
 		}
 
 		&.bg-white{
-			.col-8{background: $light;}
+			.col-8{background: #F9F9F9;}
 		}
 
 		.col-4{
@@ -146,6 +147,16 @@
 			img{
 				object-fit: cover;
 				width: 100%;
+			}
+		}
+
+		&.reverse{
+			.row{
+				flex-direction: column-reverse;
+				@include tablet{
+					flex-direction:row;
+					&:after{display: none;}
+				}
 			}
 		}
 	}
