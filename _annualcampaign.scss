@@ -200,8 +200,10 @@
 
 
 
-.align-center.arrow-btn{
-	@include arrow-btn($white);
+.arrow-btn{
+	&.align-center{
+		@include arrow-btn($white);
+	}
 }
 
 
