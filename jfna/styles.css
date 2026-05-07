@@ -17045,6 +17045,6 @@ div.ff-form form button:active {
   background: #1c88ed;
 }
 
-.basic.cards .row {
+.shell.basic.cards .row {
   gap: 20px !important;
 }
