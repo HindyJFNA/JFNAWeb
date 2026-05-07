@@ -107,8 +107,8 @@
 				h5{@include h5($navy-blue);}
 				ul li a{@include p($dark-gray);}
 
-				p.arrow-btn a{
-					@include arrow($primary-blue);
+				p.arrow-btn {
+					@include arrow-btn($primary-blue);
 				}
 			}
 
