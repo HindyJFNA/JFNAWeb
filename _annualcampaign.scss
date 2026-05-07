@@ -40,6 +40,9 @@
 					.read-more-link{
 						@include arrow-btn($white);
 						    margin-top: 20px;
+						 &:hover{
+						 	@include arrow-btn($medium-blue);
+						 }
 						a{
 							@include p-bold($white);
 							&:hover{
@@ -196,4 +199,10 @@
 	}
 
 
+.button-arrow{
+	@include button($primary-blue, $primary-blue, outline);
+	a{
+		@include arrow-btn($primary-blue)
+	}
+}
 
