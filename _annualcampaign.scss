@@ -200,13 +200,12 @@
 
 
 
-.arrow-btn{
-	&.align-center{
-		@include arrow-btn($white);
+
+.button-primary-outline.arrow{
+	&:after{
+		@include arrow($primary-blue);
 	}
 }
-
-
 
 // .button-arrow{
 // 	@include button($primary-blue, $primary-blue, outline);
