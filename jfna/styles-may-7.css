@@ -17194,9 +17194,9 @@ div.ff-form form button:active {
 .basic.cards.reverse .row {
   flex-direction: column-reverse;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .basic.cards {
-    flex-direction: row;
+    flex-direction: row !important;
   }
   .basic.cards:after {
     display: none;

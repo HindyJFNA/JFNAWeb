@@ -156,8 +156,8 @@
 			}
 		}
 
-		@include tablet{
-			flex-direction:row;
+		@include mini{
+			flex-direction:row !important;
 			&:after{display: none;}
 		}
 	}

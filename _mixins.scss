@@ -1,6 +1,7 @@
 
 //// BREAKPOINTS ARE MOBILE FIRST!!!
 $small-tablet: 667px;
+$mini-width: 700px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $large-desktop: 1300px;
@@ -12,7 +13,13 @@ $xlarge: 1500px;
     @content;
   }
 }
- 
+
+@mixin mini {
+  @media (min-width: #{$mini-width}){
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$tablet-width}){
     @content;
