@@ -33,24 +33,31 @@
 				&:after{
 					margin-top: 20px;
 					@include arrow($light-blue);
+					display: none;
 				}
 
 				.button-container {
 					margin-top:0px;
 					a.button{
-						position: absolute;
-				    top: 0;
-				    left: 0;
-				    right: 0;
-				    bottom: 0;
-				    height: 100%;
-				    width: 100%;
-				    background: transparent;
+						position: relative;
+				   		//  top: 0;
+					    // left: 0;
+					    // right: 0;
+					    // bottom: 0;
+					    // height: 100%;
+					    // width: 100%;
+					    background: transparent;
 						box-sizing: border-box;
     					z-index: 2000;
 				       
 				        span{
-				        	display: none;
+				        	display: block;
+
+				        	&:after{
+								margin-top: 20px;
+								@include arrow($light-blue);
+								display: none;
+							}
 				        }
 					}
 				}

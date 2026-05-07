@@ -16954,6 +16954,7 @@ div.ff-form form button:active {
   align-items: flex-end;
   justify-content: center;
   transition: 0.3s;
+  display: none;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body:after:hover {
   content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23D2E9FF"/></g></svg>');
@@ -16963,19 +16964,32 @@ div.ff-form form button:active {
   margin-top: 0px;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .button-container a.button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  position: relative;
   background: transparent;
   box-sizing: border-box;
   z-index: 2000;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .button-container a.button span {
+  display: block;
+}
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .button-container a.button span:after {
+  margin-top: 20px;
+  position: relative;
+  content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%231E3EAF"/></g></svg>');
+  height: 40px;
+  width: 40px;
+  background: #D2E9FF;
+  border-radius: 100%;
+  left: 0px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.3s;
   display: none;
+}
+.feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box .body .button-container a.button span:after:hover {
+  content: url('data:image/svg+xml;charset=UTF-8,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon"><path id="icon" d="M17.3938 14.0287L13.5799 17.8533L15.082 19.3554L21.474 12.9633L15.082 6.57129L13.5799 8.07342L17.3938 11.898H4.42859V14.0287H17.3938Z" fill="%23D2E9FF"/></g></svg>');
+  background: #1c88ed;
 }
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box h4.title, .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box h4.title a {
   font-family: "Outfit", sans-serif;
