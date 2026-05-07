@@ -153,10 +153,11 @@
 		&.reverse{
 			.row{
 				flex-direction: column-reverse;
-				@include tablet{
-					flex-direction:row;
-					&:after{display: none;}
-				}
 			}
+		}
+
+		@include tablet{
+			flex-direction:row;
+			&:after{display: none;}
 		}
 	}
