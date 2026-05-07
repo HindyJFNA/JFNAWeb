@@ -1,5 +1,12 @@
 
 
+/////////////////////////////
+/////////////////////////////
+//// ANNUAL CAMPAIGN 2026 
+/////////////////////////////
+/////////////////////////////
+
+
 
 .feature-posts-manual.advocate-subgrid.blue-cards{
 
@@ -26,7 +33,6 @@
 				&:after{
 					margin-top: 20px;
 					@include arrow($light-blue);
-					display: none;
 				}
 
 				.button-container {
@@ -72,5 +78,7 @@
 		}
 	}
 }
+
+
 
 
