@@ -153,11 +153,18 @@
 		&.reverse{
 			.row{
 				flex-direction: column-reverse;
+
+				@include mini{
+					flex-direction:row !important;
+					&:after{display: none;}
+				}
 			}
 		}
 
-		@include mini{
-			flex-direction:row !important;
-			&:after{display: none;}
+		.row {
+			@include mini{
+				flex-direction:row !important;
+				&:after{display: none;}
+			}
 		}
 	}

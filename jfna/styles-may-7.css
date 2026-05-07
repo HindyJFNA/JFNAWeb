@@ -17195,10 +17195,18 @@ div.ff-form form button:active {
   flex-direction: column-reverse;
 }
 @media (min-width: 700px) {
-  .basic.cards {
+  .basic.cards.reverse .row {
     flex-direction: row !important;
   }
-  .basic.cards:after {
+  .basic.cards.reverse .row:after {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .basic.cards .row {
+    flex-direction: row !important;
+  }
+  .basic.cards .row:after {
     display: none;
   }
 }
