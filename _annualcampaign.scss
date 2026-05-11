@@ -131,6 +131,10 @@
 	@include desktop{
 		gap: 20px !important;
 	}
+
+	&:not(.row-full-width):after{
+		display:none;
+	}
 }
 
 .shell.basic.bg-primary-blue .row{

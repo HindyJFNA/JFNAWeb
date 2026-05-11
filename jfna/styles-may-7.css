@@ -17191,6 +17191,9 @@ div.ff-form form button:active {
     gap: 20px !important;
   }
 }
+.shell.basic.cards .row:not(.row-full-width):after {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .shell.basic.bg-primary-blue .row {
