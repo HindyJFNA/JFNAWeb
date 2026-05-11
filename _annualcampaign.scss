@@ -238,6 +238,7 @@
 .button-primary-outline.arrow{
 	display: flex;
     border-radius: 60px;
+	padding: 5px 24px;
 
 	&::after{ // PRIMARY BLUE ARROW 
       position: relative;

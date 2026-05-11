@@ -17403,6 +17403,7 @@ div.ff-form form button:active {
 .button-primary-outline.arrow {
   display: flex;
   border-radius: 60px;
+  padding: 5px 24px;
 }
 .button-primary-outline.arrow::after {
   position: relative;
