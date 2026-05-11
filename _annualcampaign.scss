@@ -6,7 +6,15 @@
 /////////////////////////////
 /////////////////////////////
 
+.feature-posts-manual.advocate-subgrid .col-12{
+	@include tablet {
+		grid-template-columns: 1fr;
 
+		.home-boxes .box .image img{
+			height: 250px;
+		}
+	}
+}
 
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature{
 
@@ -114,6 +122,8 @@
 
 	@include tablet{
 		gap: 20px !important;
+
+		flex-direction: row;
 	}
 
 	@include desktop{

@@ -16921,6 +16921,15 @@ div.ff-form form button:active {
   background: #27277C;
 }
 
+@media (min-width: 768px) {
+  .feature-posts-manual.advocate-subgrid .col-12 {
+    grid-template-columns: 1fr;
+  }
+  .feature-posts-manual.advocate-subgrid .col-12 .home-boxes .box .image img {
+    height: 250px;
+  }
+}
+
 .feature-posts-manual.advocate-subgrid.blue-cards .col-12 .component-feature .home-boxes .box {
   flex: 1;
   border-radius: 24px;
@@ -17170,6 +17179,7 @@ div.ff-form form button:active {
 @media (min-width: 768px) {
   .shell.basic.cards .row {
     gap: 20px !important;
+    flex-direction: row;
   }
 }
 @media (min-width: 1024px) {
