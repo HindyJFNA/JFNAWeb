@@ -152,6 +152,19 @@
 			@include responsive-padding;
 			flex: 4;		
 
+			@include desktop{
+				padding: 60px 60px;
+			}
+
+			@include largedesktop {
+			     // padding: 50px 60px;
+			    padding: 60px 60px;
+			  }
+			  @include xlargedesktop {
+			     // padding: 50px 60px;
+			    padding: 60px 60px;
+			  }
+
 			.button{
 				float: left;
     			margin-right: 10px;

@@ -17321,6 +17321,21 @@ div.ff-form form button:active {
     padding: 60px 10%;
   }
 }
+@media (min-width: 1024px) {
+  .basic.cards .col-8 {
+    padding: 60px 60px;
+  }
+}
+@media (min-width: 1300px) {
+  .basic.cards .col-8 {
+    padding: 60px 60px;
+  }
+}
+@media (min-width: 1500px) {
+  .basic.cards .col-8 {
+    padding: 60px 60px;
+  }
+}
 .basic.cards .col-8 .button {
   float: left;
   margin-right: 10px;
