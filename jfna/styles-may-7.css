@@ -17524,3 +17524,78 @@ div.ff-form form button:active {
     line-height: 150%;
   }
 }
+
+.omad .col-12 {
+  width: 100%;
+}
+.omad .col-12 form#subForm {
+  margin: 0 auto;
+}
+.omad .col-12 form#subForm label {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #2A2A2A;
+  margin-bottom: 10px;
+}
+@media (min-width: 1024px) {
+  .omad .col-12 form#subForm label {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.omad .col-12 form#subForm label + .helper {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  color: #8F8F8F;
+  margin-top: 3px;
+}
+@media (min-width: 1024px) {
+  .omad .col-12 form#subForm label + .helper {
+    font-size: 15px;
+    line-height: 150%;
+  }
+}
+.omad .col-12 form#subForm label + .helper.hebrew {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
+}
+.omad .col-12 form#subForm .field {
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 24px;
+  color: #2A2A2A;
+  display: block;
+}
+.omad .col-12 form#subForm .chzn-container-single .chzn-single {
+  background: #fff;
+  background: none;
+  border: 1px solid #c9c9c9;
+  border-radius: 24px;
+  border-top: 1px solid #c9c9c9;
+  box-shadow: none;
+  color: #2A2A2A;
+  display: block;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 0 0 15px;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: 5;
+}
+.omad .col-12 form#subForm .flex-field-container .flex-row .chzn-container {
+  width: 100%;
+}
+.omad .col-12 form .user-input-form .flex-field-container .flex-row .chzn-container {
+  width: 97%;
+}
