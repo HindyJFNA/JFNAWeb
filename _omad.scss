@@ -1,13 +1,13 @@
 .omad .jotform-form{
 
 
-				.select-wrapper{
-					display: block;
-					height: auto !important;
+				// .select-wrapper{
+				// 	display: block;
+				// 	height: auto !important;
 
-					> p{display:none;}
+				// 	> p{display:none;}
 
-				}
+				// }
 
 				.chzn-container-active{
 					.chzn-drop{
@@ -36,7 +36,7 @@
 
 			
 
-					.select-wrapper .chzn-container-single .chzn-single{
+					.chzn-container-single .chzn-single{
 						background: transparent;
 						box-shadow: none;
 						border-bottom: 1px solid $gray;
