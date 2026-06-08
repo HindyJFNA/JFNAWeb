@@ -764,3 +764,31 @@ section.career-center-listing{
 	}
 }
 
+
+
+
+/* 1. Hide the original text specifically on page 4164 */
+.section-id-4164 .page-main.suggest-job .page-title h2 {
+    visibility: hidden;
+    position: relative;
+    white-space: nowrap; /* Prevents layout jitter */
+}
+/* 2. Insert the new text */
+.section-id-4164 .page-main.suggest-job .page-title h2::after {
+    content: "Submit a Jewish Federation Role";
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    /* Ensure it inherits or defines header styling */
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 78px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0%;
+    color: #1E3EAF;
+    text-align: center;
+    width: 100%;
+} 

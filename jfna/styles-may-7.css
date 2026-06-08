@@ -17422,3 +17422,112 @@ div.ff-form form button:active {
   transition: 0.3s;
   flex: none;
 }
+
+.omad .jotform-form .select-wrapper {
+  display: block;
+  height: auto !important;
+}
+.omad .jotform-form .select-wrapper > p {
+  display: none;
+}
+.omad .jotform-form .chzn-container-active .chzn-drop {
+  position: relative;
+}
+.omad .jotform-form .chzn-container-active .chzn-drop {
+  position: relative;
+  border-bottom: 1px solid #c9c9c9;
+}
+.omad .jotform-form .chzn-container-active .chzn-single {
+  border-bottom: 0px solid #c9c9c9 !important;
+}
+.omad .jotform-form .select-wrapper .chzn-container-single .chzn-single {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #c9c9c9;
+  position: relative;
+  padding: 0px;
+  height: 50px !important;
+}
+@media (min-width: 1024px) {
+  .omad .jotform-form .select-wrapper .chzn-container-single .chzn-single {
+    height: 50px;
+  }
+}
+@media (min-width: 1300px) {
+  .omad .jotform-form .select-wrapper .chzn-container-single .chzn-single {
+    height: 50px;
+  }
+}
+.omad .jotform-form .select-wrapper .chzn-container-single .chzn-single span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #2A2A2A;
+}
+@media (min-width: 1024px) {
+  .omad .jotform-form .select-wrapper .chzn-container-single .chzn-single span {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.omad .jotform-form .select-wrapper .chzn-container-single .chzn-single::after {
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%206L6%200L12%206L10.6%207.4L6%202.8L1.4%207.4L0%206Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  transform: rotate(180deg);
+  transition: 0.3s;
+  transform-origin: center center;
+  /* Default */
+}
+.omad .jotform-form .chzn-container .chzn-drop {
+  background: transparent;
+  box-shadow: none;
+  border: 0px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #c9c9c9;
+  width: 100%;
+}
+.omad .jotform-form .chzn-container .chzn-drop .buttons {
+  display: none;
+}
+.omad .jotform-form .chzn-container .chzn-drop .checklist {
+  max-height: 200px;
+  overflow: scroll;
+}
+.omad .jotform-form .chzn-container .chzn-drop .checklist .custom-checkbox {
+  border-radius: 100%;
+}
+.omad .jotform-form .chzn-container .chzn-drop ul li label span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #2A2A2A;
+}
+@media (min-width: 1024px) {
+  .omad .jotform-form .chzn-container .chzn-drop ul li label span {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.omad .jotform-form .chzn-container .chzn-drop .checklist-field .button.small input {
+  background: transparent;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #2A2A2A;
+}
+@media (min-width: 1024px) {
+  .omad .jotform-form .chzn-container .chzn-drop .checklist-field .button.small input {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

@@ -1,0 +1,113 @@
+.omad .jotform-form{
+
+
+				.select-wrapper{
+					display: block;
+					height: auto !important;
+
+					> p{display:none;}
+
+				}
+
+				.chzn-container-active{
+					.chzn-drop{
+						position: relative;
+						// border-bottom: 1px solid $gray;
+					}
+
+					.chzn-single{
+						// border-bottom: 0px solid $gray;
+					}
+				}
+		
+
+
+
+					.chzn-container-active{
+						.chzn-drop{
+							position: relative;
+							border-bottom: 1px solid $gray;
+						}
+
+						.chzn-single{
+							border-bottom: 0px solid $gray !important;
+						}
+					}
+
+			
+
+					.select-wrapper .chzn-container-single .chzn-single{
+						background: transparent;
+						box-shadow: none;
+						border-bottom: 1px solid $gray;
+						position: relative;
+						padding: 0px;
+						height: 50px !important;
+
+						@include desktop {
+							height: 50px;
+						}
+
+						@include largedesktop {
+							height: 50px;
+						}
+
+						span{
+							@include label($dark-gray);
+						}
+
+						&::after {
+							position: absolute;
+						 	content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%206L6%200L12%206L10.6%207.4L6%202.8L1.4%207.4L0%206Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+						 	// display: inline-block;
+						 	top: 0;
+						 	right:0;
+						  	width: auto;
+						  	height: auto;
+						  	// right:0px;
+						  	transform: rotate(180deg);
+						  	transition:.3s;
+						  	transform-origin: center center; /* Default */
+
+						}
+					}
+
+					.chzn-container .chzn-drop{
+						background: transparent;
+						box-shadow: none;
+						border: 0px;
+						padding: 10px 0px;
+
+						border-bottom: 1px solid $gray;
+						    width: 100%;
+
+						.buttons{display: none;}
+
+						.checklist{
+							max-height: 200px;
+   							overflow: scroll;
+
+   							.custom-checkbox{
+   								border-radius: 100%;
+   							}
+						}
+
+						ul{
+							li{
+								label{
+									span{
+										@include label($dark-gray);
+									}
+								}
+							}
+						}
+
+						.checklist-field .button.small{
+							input{
+								background: transparent;
+								@include label($dark-gray);
+							}
+						}
+					}
+ 
+}
