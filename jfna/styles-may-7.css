@@ -17465,6 +17465,21 @@ div.ff-form form button:active {
     line-height: 150%;
   }
 }
+.omad .jotform-form .chzn-container-single .chzn-single::after {
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%206L6%200L12%206L10.6%207.4L6%202.8L1.4%207.4L0%206Z%22%20fill%3D%22black%22/%3E%3C/svg%3E");
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  transform: rotate(180deg);
+  transition: 0.3s;
+  transform-origin: center center;
+  /* Default */
+}
+.omad .jotform-form .chzn-container-single .chzn-single div b {
+  background-image: none;
+}
 .omad .jotform-form .chzn-container .chzn-drop {
   background: transparent;
   box-shadow: none;
@@ -17513,10 +17528,6 @@ div.ff-form form button:active {
   }
 }
 
-.omad .omad-form-wrap {
-  margin: 0 auto;
-  padding: 20px 0;
-}
 .omad .mobile-row {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
