@@ -143,6 +143,11 @@
 				@include caption($medium-gray);
 			}
 
+			input{
+				margin-top: 0px;
+    			height: 50px;
+			}
+
 			.field {
 			    background: #fff;
 			    border: 1px solid $gray;

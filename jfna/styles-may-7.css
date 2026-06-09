@@ -17577,6 +17577,10 @@ div.ff-form form button:active {
   text-align: right;
   direction: rtl;
 }
+.omad .col-12 form#subForm input {
+  margin-top: 0px;
+  height: 50px;
+}
 .omad .col-12 form#subForm .field {
   background: #fff;
   border: 1px solid #c9c9c9;
