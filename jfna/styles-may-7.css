@@ -17528,6 +17528,9 @@ div.ff-form form button:active {
   }
 }
 
+.omad .omad-form-wrap {
+  margin: 0 auto;
+}
 .omad .mobile-row {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
