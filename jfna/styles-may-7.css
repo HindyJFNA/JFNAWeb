@@ -17528,12 +17528,6 @@ div.ff-form form button:active {
   }
 }
 
-.omad .checkbox-row {
-  align-items: center !important;
-}
-.omad .checkbox-row label {
-  margin-bottom: 0px;
-}
 .omad .omad-form-wrap {
   margin: 0 auto;
 }
@@ -17589,6 +17583,12 @@ div.ff-form form button:active {
 .omad .col-12 form#subForm input {
   margin-top: 0px;
   height: 50px;
+}
+.omad .col-12 form#subForm .checkbox-row {
+  align-items: center !important;
+}
+.omad .col-12 form#subForm .checkbox-row label {
+  margin-bottom: 0px;
 }
 .omad .col-12 form#subForm .field {
   background: #fff;

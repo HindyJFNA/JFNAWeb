@@ -112,12 +112,6 @@
 
 .omad{
 
-	.checkbox-row{
-		align-items: center !important;
-		label{
-			margin-bottom:0px;
-		}
-	}
 
 	.omad-form-wrap {
 	    // max-width: 80%;
@@ -151,6 +145,13 @@
 			input{
 				margin-top: 0px;
     			height: 50px;
+			}
+
+			.checkbox-row{
+				align-items: center !important;
+				label{
+					margin-bottom:0px;
+				}
 			}
 
 			.field {
