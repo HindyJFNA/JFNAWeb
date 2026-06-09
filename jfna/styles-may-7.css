@@ -17589,7 +17589,7 @@ div.ff-form form button:active {
   display: block;
 }
 .omad .col-12 form#subForm .chzn-container {
-  width: 100%;
+  width: 100% !important;
 }
 .omad .col-12 form#subForm .chzn-container-single .chzn-single {
   background: #fff;
