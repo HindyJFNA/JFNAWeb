@@ -17486,6 +17486,7 @@ div.ff-form form button:active {
   box-shadow: 0px 6px 20px 5px #0000000f;
   background: white;
   border-radius: 24px;
+  position: absolute;
 }
 .omad .jotform-form .chzn-container .chzn-drop .buttons {
   display: none;
