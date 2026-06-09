@@ -17528,6 +17528,12 @@ div.ff-form form button:active {
   }
 }
 
+.omad .checkbox-row {
+  align-items: center !important;
+}
+.omad .checkbox-row label {
+  margin-bottom: 0px;
+}
 .omad .omad-form-wrap {
   margin: 0 auto;
 }
