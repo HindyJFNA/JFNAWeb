@@ -17588,6 +17588,9 @@ div.ff-form form button:active {
   color: #2A2A2A;
   display: block;
 }
+.omad .col-12 form#subForm .chzn-container {
+  width: 100%;
+}
 .omad .col-12 form#subForm .chzn-container-single .chzn-single {
   background: #fff;
   background: none;
